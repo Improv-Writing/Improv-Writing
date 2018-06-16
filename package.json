@@ -1,0 +1,8 @@
+{
+  "name": "Improv-Writing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Improv-Writing/Improv-Writing.git",
+  "author": "earyzhikova <elenaryzh55@gmail.com>",
+  "license": "MIT"
+}
