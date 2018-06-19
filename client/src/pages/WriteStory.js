@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // import Jumbotron from "../../components/Jumbotron";
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
-import SearchResultContainer from "../../components/SearchResultContainer";
+import SearchResultContainer from "../components/SearchResultContainer";
 
 
 // 
