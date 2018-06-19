@@ -42,7 +42,7 @@ class SearchResultContainer extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <ResultList results={this.state.results} />
+        <ResultList results={this.state.results} onImageClick={this.props.onImageClick} />
       </div>
     );
   }

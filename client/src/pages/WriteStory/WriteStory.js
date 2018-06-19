@@ -3,21 +3,24 @@ import React, { Component } from "react";
 // import Jumbotron from "../../components/Jumbotron";
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
+import SearchResultContainer from "../../components/SearchResultContainer";
 
 
-
-
+// 
 
 class WriteStory extends Component {
+
+ handleImageClick(){
+   alert("Some text");
+ }
 
 
   render() {
     return (
       <div>
-     <p>WriteStory</p>
+      <SearchResultContainer onImageClick={() => this.handleImageClick()}/>
       </div>
     );
   }
 }
-
 export default WriteStory;
