@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import SearchForm from "./SearchForm";
 import ResultList from "./ResultList";
 import API from "../../utils/API";
+import Container from "../Container";
+import Row from "../Row";
+import Col from "../Col";
+
 
 class SearchResultContainer extends Component {
   state = {
@@ -36,14 +40,27 @@ class SearchResultContainer extends Component {
 
   render() {
     return (
+
       <div>
+        <Container>
+        <Row>
+          <Col size = "md-10">
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
+        </Col>
+        </Row>
+        <Row>
+          <Col size="md-12">
         <ResultList results={this.state.results} onImageClick={this.props.onImageClick} />
+        </Col>
+        </Row>
+        </Container>
+        
       </div>
+      
     );
   }
 }

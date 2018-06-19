@@ -1,21 +1,17 @@
 import React from "react";
+import GifImage from "./GifImage";
 
-class ResultList extends React.Component {
+class ResultList extends React.Component {  
+
   render(){
   return(
-  <ul className="list-group">
+    <div>
     {this.props.results.map(result => (
-      <li className="list-group-item" key={result.id}>
-      <button onClick={this.props.onImageClick}>
-        <img
-          alt={result.title}
-          className="img-fluid"
-          src={result.images.original.url}
-        />
-        </button>
-      </li>
+      <div>
+      <GifImage title={result.title} src={result.images.original.url} onImageClick={this.props.onImageClick}/>
+      </div>
     ))}
-  </ul>
+    </div>
   )};
 };
 
