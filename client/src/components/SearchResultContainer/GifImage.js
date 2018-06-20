@@ -1,4 +1,8 @@
 import React from "react";
+import Container from "../Container";
+import Row from "../Row";
+import Col from "../Col";
+
 
 class GifImage extends React.Component {
   constructor(){
@@ -13,15 +17,21 @@ class GifImage extends React.Component {
 
   render() {
     return (
-      <div>
+      
+        <Container fluid>
+          <Row>
+           <Col size="md-3">
         <button onClick={this.passImageUp}>
-        <img
+        <img 
           alt={this.props.title}
           className="img-fluid"
           src={this.props.src}
         />
         </button>
-      </div>
+        </Col>
+        </Row>
+        </Container>
+     
     );
   }
 }

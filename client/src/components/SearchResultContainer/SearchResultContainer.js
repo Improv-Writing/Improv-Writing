@@ -41,10 +41,10 @@ class SearchResultContainer extends Component {
   render() {
     return (
 
-      <div>
+      <div style={{display:'inline'}} >
         <Container>
         <Row>
-          <Col size = "md-10">
+          <Col size = "md-4">
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
@@ -53,7 +53,7 @@ class SearchResultContainer extends Component {
         </Col>
         </Row>
         <Row>
-          <Col size="md-12">
+          <Col size="md-10">
         <ResultList results={this.state.results} onImageClick={this.props.onImageClick} />
         </Col>
         </Row>

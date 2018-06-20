@@ -5,9 +5,7 @@ import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import SearchResultContainer from "../components/SearchResultContainer";
 import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
-
+import {Grid, Col, Row} from "react-bootstrap";
 
 class WriteStory extends Component {
   constructor(){
@@ -26,16 +24,10 @@ class WriteStory extends Component {
 
   render() {
     return (
-      <div>
-        <Container>
-        <Row>
-        <Col size ="md-4">
+      <div>        
         
       <SearchResultContainer onImageClick={this.handleImageClick}/>
-      </Col>
-      </Row>
-      </Container>
-      
+     
       </div>
     );
   }
