@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import Container from "../Container";
 import Row from "../Row";
 import Col from "../Col";
-
+import "./SearchResultContainer.css";
 
 class SearchResultContainer extends Component {
   state = {
@@ -41,8 +41,8 @@ class SearchResultContainer extends Component {
   render() {
     return (
 
-      <div style={{display:'inline'}} >
-        <Container>
+      <div>
+        <Container fluid>
         <Row>
           <Col size = "md-4">
         <SearchForm
@@ -52,11 +52,9 @@ class SearchResultContainer extends Component {
         />
         </Col>
         </Row>
-        <Row>
-          <Col size="md-10">
+
         <ResultList results={this.state.results} onImageClick={this.props.onImageClick} />
-        </Col>
-        </Row>
+
         </Container>
         
       </div>
