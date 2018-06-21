@@ -17,6 +17,7 @@ class WriteStory extends Component {
     this.handleImageClick = this.handleImageClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+   
   }
 
   handleChange(event) {
@@ -36,6 +37,7 @@ class WriteStory extends Component {
     })
   }
 
+ 
 
   render() {
     return (
@@ -49,7 +51,9 @@ class WriteStory extends Component {
             />
             <form onSubmit={this.handleSubmit}>
               <label>
+                
                 Story:
+               
           <textarea value={this.state.textValue} onChange={this.handleChange} />
               </label>
               <input type="submit" value="Submit" />
