@@ -13,13 +13,13 @@ const Home = () => (
     <Container style={{ marginTop: 30, }}>
       <Row style= {{justifyContent: 'left',}}>
         <Col size="md-10">
-          <h2> Instructions: </h2>
+          <h2 style= {{fontWeight: "bold",}}> Instructions: </h2>
           <p>
             This application was developed to help build your creative writing skills, and to help you
             use your imagination. Instead of using prompts, this app uses pictures to help you visualize what you are writing.
             <ul style= {{marginTop: 10,}}>
               <li>To start, click on the 'Write' tab at the top of the page.</li>
-              <li>Search for an image. If you need ideas on where to start, choose a catagory from the catagories tab. </li> 
+              <li>Search for an image. If you need ideas on where to start, there is a random image of the day in the sidebar. </li> 
               <li>Begin writing your story in the input box below the picture, and when you are done click 'Submit'! </li>
               </ul>
             You can save your stories to your profile for later, and you can share them with other users! 
