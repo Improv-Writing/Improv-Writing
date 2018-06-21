@@ -43,20 +43,19 @@ class WriteStory extends Component {
     return (
       <div>
         {this.state.imageClicked ? (
-          <div>
+          <div style= {{marginLeft: 350, marginTop: 50,}}>
             <img
               alt={this.state.imageClicked.title}
               className="img-fluid"
               src={this.state.imageClicked.src}
+              style= {{height: 300,}}
             />
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} >
               <label>
-                
-                Story:
-               
-          <textarea value={this.state.textValue} onChange={this.handleChange} />
+            
+          <textarea value={this.state.textValue} onChange={this.handleChange} style={{height: 300, width: 533, marginTop: 30, marginLeft: 0, marginBottom: 100, }}/>
               </label>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" style={{position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20,}}/>
             </form>
           </div>
 
