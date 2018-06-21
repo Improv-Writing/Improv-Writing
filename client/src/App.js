@@ -37,7 +37,7 @@ const App = () => (
         {/* <Route component={NoMatch} /> */}
     </Switch></Col>
     <Col xs={8} md={2} style= {{
-      paddingLeft: 20, margin: 0, fontSize: 18, borderLeft: "solid", borderRight: "solid", backgroundColor: "#DCDCDC", }}>
+      paddingLeft: 20, margin: 0, fontSize: 18, borderLeft: "solid", borderRight: "solid", backgroundColor: "#DCDCDC", minHeight: 100, }}>
       <Row style= {{ marginBottom: 90, marginTop: 20, justifyContent: 'center',}}>
         <a href= "http://www.thesaurus.com/" target="_blank">Thesaurus</a>
       </Row>
