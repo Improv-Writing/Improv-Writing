@@ -8,7 +8,7 @@ import Col from "../components/Col";
 const Home = () => (
   <div>
     <Gifbackground backgroundImage="https://media.giphy.com/media/26ybvWvSByu3M6pzO/giphy.gif">
-      <h1>Make Gifstory!</h1>
+      <h1>Gifstories</h1>
     </Gifbackground>
     <Container style={{ marginTop: 30, }}>
       <Row style= {{justifyContent: 'left',}}>
