@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import StoryShare from "./pages/StoryShare";
 import Profile from "./pages/Profile";
 import WriteStory from "./pages/WriteStory";
-import Categories from "./pages/Categories";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -33,7 +32,7 @@ const App = () => (
         {/* /* these are login only */}
         <Route exact path="/Profile" component={Profile} />
         <Route exact path="/WriteStory" component={WriteStory} />
-        <Route exact path="/Categories" component={Categories} />
+        
         <Route path="/NoMatch" component={NoMatch} />
 
         {/* <Route component={NoMatch} /> */}
