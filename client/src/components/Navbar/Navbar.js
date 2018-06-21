@@ -23,18 +23,6 @@ const Navbar = props => (
           </Link>
         </li>
 
-          <li
-          className={
-            window.location.pathname === "/" ||
-            window.location.pathname === "/Categories"
-              ? "nav-item active"
-              : "nav-item"
-          }
-        >
-          <Link to="/Categories" className="nav-link">
-          Categories 
-          </Link>
-        </li>
         <li
           className={
             window.location.pathname === "/StoryShare"
