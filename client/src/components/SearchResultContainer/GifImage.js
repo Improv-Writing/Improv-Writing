@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../Container";
 import Row from "../Row";
 import Col from "../Col";
+import "./SearchResultContainer.css";
 
 
 class GifImage extends React.Component {
@@ -17,10 +18,8 @@ class GifImage extends React.Component {
 
   render() {
     return (
-      
-        <Container fluid>
-          <Row>
-           <Col size="md-3">
+        // <div className="column">
+        <Col size="md-3">
         <button onClick={this.passImageUp}>
         <img 
           alt={this.props.title}
@@ -29,8 +28,7 @@ class GifImage extends React.Component {
         />
         </button>
         </Col>
-        </Row>
-        </Container>
+        // </div>
      
     );
   }

@@ -1,4 +1,6 @@
 import React from "react";
+import "./SearchResultContainer.css";
+
 
 const SearchForm = props => (
   <form>
