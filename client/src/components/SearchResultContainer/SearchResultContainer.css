@@ -15,3 +15,14 @@
   margin-top: 8px;
   vertical-align: middle;
 }
+
+.btn {
+
+	float: left;
+	margin-left: 40;
+	 margin-bottom: 100;
+	 background-color: "blue";
+	 color: "white"; 
+	 padding: 10; 
+	 font-size: 20;
+}
