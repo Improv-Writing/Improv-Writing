@@ -19,7 +19,7 @@ class GifImage extends React.Component {
   render() {
     return (
         // <div className="column">
-        <Col size="md-3">
+        // <Col size="md-3">
         <button onClick={this.passImageUp}>
         <img 
           alt={this.props.title}
@@ -27,7 +27,7 @@ class GifImage extends React.Component {
           src={this.props.src}
         />
         </button>
-        </Col>
+        // </Col>
         // </div>
      
     );

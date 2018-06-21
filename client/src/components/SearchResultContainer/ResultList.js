@@ -5,30 +5,47 @@ import Row from "../Row";
 
 
 class ResultList extends React.Component {
-    // constructor(props){
-    //   super(props);
-      
-    //   // console.log(firstImgColumn);
-    //   this.state={
-    //     imagesPerColumn :numberPerColumn,
-    //     firstImgsColumn: firstImgColumn,
-    //   }
-    // }
+    constructor(props){
+      super(props);
+      const numberPerColumn =this.props.results.length/4;
+      this.state={
+        imagesPerColumn :numberPerColumn,
+      }
+    }
     
     // componentDidMount(){
       // console.log(this.props.results);
     // }
     
     render(){
-      // const numberPerColumn =this.props.results.length/4;
       // const firstImgColumn= this.props.results.slice(0,numberPerColumn);
+      let imgColumnOne = this.props.results.slice(0,(this.props.results.length/4));
+      let imgColumnTwo = this.props.results.slice((this.props.results.length/4),((this.props.results.length/4)*2));
+      let imgColumnThree =this.props.results.slice(((this.props.results.length/4)*2),((this.props.results.length/4)*3));
+      let imgColumnFour = this.props.results.slice(((this.props.results.length/4)*3),((this.props.results.length/4)*4));
   return(
     <div>
     <Row>
-    {this.props.results.map(result => (
+    <div className='column'>
+    {imgColumnOne.map(result => (
       <GifImage title={result.title} src={result.images.original.url} onImageClick={this.props.onImageClick}/>
-
     ))}
+    </div>
+    <div className='column'>
+    {imgColumnTwo.map(result => (
+      <GifImage title={result.title} src={result.images.original.url} onImageClick={this.props.onImageClick}/>
+    ))}
+    </div>
+    <div className='column'>
+    {imgColumnThree.map(result => (
+      <GifImage title={result.title} src={result.images.original.url} onImageClick={this.props.onImageClick}/>
+    ))}
+    </div>
+    <div className='column'>
+    {imgColumnFour.map(result => (
+      <GifImage title={result.title} src={result.images.original.url} onImageClick={this.props.onImageClick}/>
+    ))}
+    </div>
     </Row>
     </div>
   )};
