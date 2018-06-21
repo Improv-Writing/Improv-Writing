@@ -53,7 +53,7 @@ class WriteStory extends Component {
             
           <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story!" style={{height: 300, width: 533, marginTop: 30, marginLeft: 0, marginBottom: 100, }}/>
               </label>
-              <input type="submit" value="Submit" style={{position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20,}}/>
+              <input type="submit" value="Submit" style={{position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, borderRadius: 6,}}/>
             </form>
           </div>
 

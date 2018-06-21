@@ -17,8 +17,8 @@ const SearchForm = props => (
       />
       <button
         onClick={props.handleFormSubmit}
-        className="btn btn-primary mt-3"
-        style= {{marginBottom: 20,}}
+        className="btn"
+        style= {{marginTop: 10, marginBottom: 20, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold",}}
       >
         Search
       </button>
