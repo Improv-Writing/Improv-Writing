@@ -10,22 +10,23 @@ const Home = () => (
     <Gifbackground backgroundImage="https://media.giphy.com/media/26ybvWvSByu3M6pzO/giphy.gif">
       <h1>Make Gifstory!</h1>
     </Gifbackground>
-    <Container style={{ marginTop: 30 }}>
-      <Row>
-        <Col size="md-8">
+    <Container style={{ marginTop: 30, }}>
+      <Row style= {{justifyContent: 'left',}}>
+        <Col size="md-10">
+          <h2> Instructions: </h2>
           <p>
             This application was developed to help build your creative writing skills, and to help you
-            use your imagination. Choose an image from the search tab at the top of the navbar,
-            and then begin writing your story in the box below the picture! You can save your stories to
-            your profile for later, and you can share them with other users! The storyshare tab is where
-            you can also find stories written by other writers! Happy writing!
+            use your imagination. Instead of using prompts, this app uses pictures to help you visualize what you are writing.
+            <ul style= {{marginTop: 10,}}>
+              <li>To start, click on the 'Write' tab at the top of the page.</li>
+              <li>Search for an image. If you need ideas on where to start, choose a catagory from the catagories tab. </li> 
+              <li>Begin writing your story in the input box below the picture, and when you are done click 'Submit'! </li>
+              </ul>
+            You can save your stories to your profile for later, and you can share them with other users! 
+            The storyshare tab is where you can also find stories written by other writers! Happy writing!
           </p>
         </Col>
-        <Col size="md-4">
-          <p>
-            Blah Blah Blah Blah Blah Blah
-          </p>
-        </Col>
+        
       </Row>
     </Container>
   </div>

@@ -19,16 +19,16 @@ import {Grid, Col, Row} from "react-bootstrap";
 
 
 const App = () => (
-  <Router>
-    <div>
+  <Router >
+    <div >
       <Navbar />
-      <Wrapper>
-      <Grid>
-  <Row className="show-grid">
-    <Col xs={12} md={10}>
+      <Wrapper  >
+      <Grid fluid= {true} style= {{marginLeft: 0, marginRight: 0, }}>
+  <Row className="show-grid" >
+    <Col xs={12} md={10} >
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/StoryShare" component={StoryShare} />
+        <Route exact path="/StoryShare" component={StoryShare}  />
 
         {/* /* these are login only */}
         <Route exact path="/Profile" component={Profile} />
@@ -38,14 +38,26 @@ const App = () => (
 
         {/* <Route component={NoMatch} /> */}
     </Switch></Col>
-    <Col xs={4} md={2}>
-    <a href>Thesaurus</a>
-    <p>Word of the Day: </p>
-    <p>bla-bla</p>
-    <p>Image of the Day</p>
-    <p>ghkjhgk</p>
-
-    <p>About Us | Contact</p>
+    <Col xs={8} md={2} style= {{
+      paddingLeft: 20, margin: 0, fontSize: 18, borderLeft: "solid", borderRight: "solid", backgroundColor: "#DCDCDC", }}>
+      <Row style= {{ marginBottom: 90, marginTop: 20, justifyContent: 'center',}}>
+        <a href= "http://www.thesaurus.com/" target="_blank">Thesaurus</a>
+      </Row>
+      <Row style= {{justifyContent: 'center',}}>
+        <p style= {{ marginBottom: 20, color: "blue", }}>Word of the Day: </p>
+      </Row>
+      <Row style= {{justifyContent: 'center',}}>
+        <p style= {{marginBottom: 90,}}>eloquent</p>
+      </Row>
+      <Row style= {{justifyContent: 'center',}}>
+        <p style= {{marginBottom: 20, color: "red",}}>Image of the Day:</p>
+      </Row>
+      <Row style= {{justifyContent: 'center',}}>
+        <p style= {{marginBottom: 90,}}>ghkjhgk</p>
+      </Row>
+      <Row style= {{justifyContent: 'center',}}>
+        <p style= {{color: "green",}}>About Us | Contact</p>
+      </Row>
 
 
     
