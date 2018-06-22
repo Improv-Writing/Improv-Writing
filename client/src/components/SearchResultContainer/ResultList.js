@@ -5,20 +5,8 @@ import Row from "../Row";
 
 
 class ResultList extends React.Component {
-    constructor(props){
-      super(props);
-      const numberPerColumn =this.props.results.length/4;
-      this.state={
-        imagesPerColumn :numberPerColumn,
-      }
-    }
-    
-    // componentDidMount(){
-      // console.log(this.props.results);
-    // }
     
     render(){
-      // const firstImgColumn= this.props.results.slice(0,numberPerColumn);
       let imgColumnOne = this.props.results.slice(0,(this.props.results.length/4));
       let imgColumnTwo = this.props.results.slice((this.props.results.length/4),((this.props.results.length/4)*2));
       let imgColumnThree =this.props.results.slice(((this.props.results.length/4)*2),((this.props.results.length/4)*3));
