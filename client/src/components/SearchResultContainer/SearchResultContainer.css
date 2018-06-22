@@ -17,12 +17,8 @@
 }
 
 .btn {
-
-	float: left;
-	margin-left: 40;
-	 margin-bottom: 100;
-	 background-color: "blue";
-	 color: "white"; 
-	 padding: 10; 
-	 font-size: 20;
+	background-color: "blue"; 
+	color: "white"; 
+	padding: 10; 
+	font-size: 20;
 }

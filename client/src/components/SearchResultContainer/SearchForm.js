@@ -5,7 +5,7 @@ import "./SearchResultContainer.css";
 const SearchForm = props => (
   <form>
     <div className="form-group">
-      <label htmlFor="search">Choose your image:</label>
+      <label htmlFor="search" style= {{paddingTop: 20, paddingBottom: 10, fontSize: 20,}}>Choose your image:</label>
       <input
         onChange={props.handleInputChange}
         value={props.search}
@@ -17,7 +17,8 @@ const SearchForm = props => (
       />
       <button
         onClick={props.handleFormSubmit}
-        className="btn btn-primary mt-3"
+        className="btn"
+        style= {{marginTop: 10, marginBottom: 20, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold",}}
       >
         Search
       </button>
