@@ -11,7 +11,7 @@ const Home = () => (
       <h1>Gifstories</h1>
     </Gifbackground>
     <Container style={{ marginTop: 30, }}>
-      <Row style= {{justifyContent: 'left',}}>
+      <Row style= {{justifyContent: 'center',}}>
         <Col size="md-10">
           <h2 style= {{fontWeight: "bold",}}> Instructions: </h2>
           <p>
