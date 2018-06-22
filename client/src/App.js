@@ -45,7 +45,7 @@ const App = () => (
         <p style= {{ marginBottom: 20, color: "blue", fontWeight: "bold", }}>Word of the Day: </p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 90,}}>eloquent</p>
+        <p style= {{marginBottom: 90,}}>sublime</p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
         <p style= {{marginBottom: 20, color: "red", fontWeight: "bold",}}>Image of the Day:</p>
