@@ -11,7 +11,7 @@ const UserSchema = new Schema({
         storyImgName: { type: String, required: true },
         storyComments: 
           [{
-            comments: { type: String, required: true },
+            comment: { type: String, required: true },
           }],
         storyLikes: {type: Number}
      }],

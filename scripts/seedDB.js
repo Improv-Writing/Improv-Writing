@@ -45,35 +45,6 @@ function generateUsers(numberOfUsers, numberofStories) {
 }
 
 
-
-
-// const storySeed = [
-//   {
-//     storyText: "TCats",
-//     storyImgUrl: "https://giphy.com/",
-//     storyImgName: "CAT",
-//     storyComments: [
-//       "ghkjhgkjhgkjhgkjhg",
-//       "hjlkjhlkjhlkjh;lkjh"
-//     ],
-//     storyLikes: 1,
-      
-//     date: new Date(Date.now())
-//   },
-//   {
-//     storyText: "The Dead Zone",
-//     storyImgUrl: "https://giphy.com/",
-//     storyImgName: "CAT",
-//     storyComments: [
-//       "ghkjhgkjhgkjhgkjhg",
-//       "hjlkjhlkjhlkjh;lkjh"
-//     ],
-//     storyLikes: 2,
-      
-//     date: new Date(Date.now())
-//   },
-// ];
-
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(generateUsers(10, 3)))
