@@ -2,40 +2,44 @@ import React from 'react';
 import { Card, Button, CardImg, CardHeader, CardBody,
   CardTitle, CardText, CardDeck, CardSubtitle } from 'reactstrap';
 // import { DeleteBtn } from "./DeleteBtn/DeleteBtn.js";
-
+// import ".CardProfile.css";
 
 const CardProfile = (props) => {
   return (
+    <div>
+      <p className = "yourProfile"> Your Profile:</p>
     <CardDeck> 
       <Card body outline color="secondary">
-          <CardTitle>Name</CardTitle>
+          {/* <CardTitle>Name</CardTitle> */}
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
         <CardBody>
           <CardSubtitle>Title of the Story</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button>Button</Button>
+          <Button>Share</Button>
           { /* <DeleteBtn /> */ }
         </CardBody>
       </Card>
       <Card body outline color="secondary">
-          <CardTitle>Name</CardTitle>
+          {/* <CardTitle>Name</CardTitle> */}
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
         <CardBody>
           <CardSubtitle>Title of the Story</CardSubtitle>
           <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Button</Button>
+          <Button>Share</Button>
+          {/* <Button>Button</Button> */}
         </CardBody>
       </Card>
       <Card body outline color="secondary">
-          <CardTitle>Name</CardTitle>
+          {/* <CardTitle>Name</CardTitle> */}
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
         <CardBody>
           <CardSubtitle>Title of the Story</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button>Button</Button>
+          <Button>Share</Button>
         </CardBody>
       </Card>
     </CardDeck>
+    </div>
   );
 };
 
