@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // import Jumbotron from "../../components/Jumbotron";
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
-
+import CardProfile from "../components/Card/CardProfile"
 
 
 
@@ -15,7 +15,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-     <p>Profile</p>
+     <CardProfile />
       </div>
     );
   }
