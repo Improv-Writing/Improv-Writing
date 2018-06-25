@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button, CardImg, CardHeader, CardBody,
   CardTitle, CardText, CardDeck, CardSubtitle } from 'reactstrap';
-// import { DeleteBtn } from "./DeleteBtn/DeleteBtn.js";
+import DeleteBtn from "../DeleteBtn";
 
 const Example = (props) => {
   return (
@@ -16,7 +16,7 @@ const Example = (props) => {
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
           <Button>Button</Button>
-          { /* <DeleteBtn /> */ }
+          <DeleteBtn />
         </CardBody>
       </Card>
       <Card>
