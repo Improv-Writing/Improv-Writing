@@ -5,7 +5,7 @@ import DeleteBtn from "../../components/DeleteBtn";
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 import Example from "../components/Card/Test.js";
-
+// import CardProfile from "../components/Card/CardProfile"
 
 
 
@@ -16,8 +16,11 @@ class Profile extends Component {
   render() {
     return (
       <div>
+
      	<p>Profile</p>
      	<Example />
+
+//      <CardProfile />
       </div>
     );
   }	

@@ -11,12 +11,12 @@ const UserSchema = new Schema({
         storyImgName: { type: String, required: true },
         storyComments: 
           [{
-            comments: { type: String, required: true },
+            comment: { type: String, required: true },
           }],
         storyLikes: {type: Number}
      }],
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+  username: { type: String, required: false, unique: true },
+  password: { type: String, required: false },
   date: { type: Date, default: Date.now }
 });
 

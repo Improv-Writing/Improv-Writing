@@ -11,9 +11,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Gifbackground from "./components/Gifbackground";
+import Random from "./components/Random";
 import {Grid, Col, Row} from "react-bootstrap";
 
 // const App = () => <NavContainer />;
+
 
 
 
@@ -51,7 +53,9 @@ const App = () => (
         <p style= {{marginBottom: 20, color: "red", fontWeight: "bold",}}>Image of the Day:</p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 90,}}>[image]</p>
+        <p style= {{marginBottom: 90,}}>
+          <Random/>
+        </p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
         <p style= {{color: "green", fontWeight: "bold",}}>About Us | Contact</p>
