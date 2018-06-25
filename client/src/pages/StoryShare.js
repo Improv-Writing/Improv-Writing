@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // import Jumbotron from "../../components/Jumbotron";
 // import API from "../../utils/API";
 // import { Link } from "react-router-dom";
-
+import CardStoryShare from "../components/CardStoryShare/CardStoryShare.js";
 
 
 
@@ -14,7 +14,7 @@ class StoryShare extends Component {
   render() {
     return (
       <div>
-     <p>StoryShare</p>
+     <CardStoryShare />
       </div>
     );
   }
