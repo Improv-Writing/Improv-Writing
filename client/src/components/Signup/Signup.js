@@ -1,10 +1,10 @@
 import React from "react";
 import {Modal, Tooltip, Button, OverlayTrigger, Popover} from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 
 
-class Login extends React.Component{
+
+class Signup extends React.Component{
 constructor(props, context) {
   super(props, context);
 
@@ -32,17 +32,18 @@ const popover = (
 );
 const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
 
+
 return (
   <div>
     
 
     <p  onClick={this.handleShow}>
-Login
+     Signup
     </p>
 
     <Modal show={this.state.show} onHide={this.handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Log in</Modal.Title>
+        <Modal.Title>Sign up!</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <h4>Text in a modal</h4>
@@ -86,4 +87,4 @@ Login
 
 
 
-export default Login;
+export default Signup;
