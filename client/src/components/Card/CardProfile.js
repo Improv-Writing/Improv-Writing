@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button, CardImg, CardHeader, CardBody,
   CardTitle, CardText, CardDeck, CardSubtitle } from 'reactstrap';
 // import { DeleteBtn } from "./DeleteBtn/DeleteBtn.js";
-// import ".CardProfile.css";
+import "./CardProfile.css";
 
 const CardProfile = (props) => {
   return (

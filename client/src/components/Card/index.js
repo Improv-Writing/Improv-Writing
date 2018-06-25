@@ -1,3 +1,2 @@
-export { default } from "./Card";
-export { default } from "./ProfileCard";
-export { default } from "./Test";
+export { default } from "./Card/CardProfile";
+export { default } from "./Card/CardStoryShare";
