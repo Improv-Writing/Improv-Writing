@@ -1,5 +1,5 @@
 import React from "react";
-import {Modal, Tooltip, Button, OverlayTrigger, Popover} from "react-bootstrap";
+import {Modal, Tooltip, Button, OverlayTrigger, Popover,} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -16,6 +16,8 @@ constructor(props, context) {
   };
 }
 
+
+
 handleClose() {
   this.setState({ show: false });
 }
@@ -31,6 +33,30 @@ const popover = (
   </Popover>
 );
 const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+
+const formInstance = (
+  <form>
+    <FieldGroup
+      id="formControlsText"
+      type="text"
+      label="Text"
+      placeholder="Enter text"
+    />
+    <FieldGroup
+      id="formControlsEmail"
+      type="email"
+      label="Email address"
+      placeholder="Enter email"
+    />
+    <FieldGroup id="formControlsPassword" label="Password" type="password" />
+    <FieldGroup
+      id="formControlsFile"
+      type="file"
+      label="File"
+      help="Example block-level help text here."
+    />
+</form>
+)
 
 return (
   <div>
