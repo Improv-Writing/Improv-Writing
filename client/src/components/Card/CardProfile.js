@@ -5,6 +5,7 @@ import { Card, Button, CardImg, CardHeader, CardBody,
 // import ".CardProfile.css";
 // import DeleteBtn from "../DeleteBtn";
 import PropTypes from "prop-types";
+import "./CardProfile.css";
 
 const CardProfile = (props) => {
   return (
