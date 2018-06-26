@@ -1,5 +1,11 @@
 import React from "react";
 import API from "../../utils/API";
+import Container from "../Container";
+import Row from "../Row";
+import Col from "../Col";
+import "../SearchResultContainer/SearchResultContainer.css";
+import WriteStory from "../../pages/WriteStory";
+
 
 
 class Random extends React.Component{
@@ -37,8 +43,7 @@ class Random extends React.Component{
 					style= {{width: 200,}}
 					className= "img-fluid"
 				/>
-				 
-				
+
 			</button>
 
 		</div>
