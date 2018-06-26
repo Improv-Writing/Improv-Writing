@@ -13,7 +13,8 @@ const UserSchema = new Schema({
           [{
             comment: { type: String, required: true },
           }],
-        storyLikes: {type: Number}
+        storyShare: {type: Boolean, required: true},
+        storyLikes: {type: Number, required: true }
      }],
   username: { type: String, required: false, unique: true },
   password: { type: String, required: false },

@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 // This file empties the Stories collection and inserts the stories below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/stories",
+  process.env.MONGODB_URI || "mongodb://localhost/users",
   
 );
 
@@ -27,6 +27,7 @@ function generateUsers(numberOfUsers, numberofStories) {
         storyImgUrl: faker.internet.url(),
         storyImgName: faker.random.word(),
         storyComments: [],
+        storyShare: faker.random.boolean(),
         storyLikes: faker.random.number(2,1000)
       }
         for (let h = 1; h<= numberofStories; h++) {
@@ -49,9 +50,8 @@ db.User
   .remove({})
   .then(() => db.User.collection.insertMany(generateUsers(10, 3)))
   .then(data => {
-    console.log(JSON.stringify(data, null, 2) )
+    // console.log(JSON.stringify(data, null, 2) )
     console.log(data.ops.length + " records inserted!");
-    process.exit(0);
   })
   .catch(err => {
     console.error(err);

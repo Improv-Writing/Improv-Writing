@@ -1,6 +1,8 @@
 import React from "react";
-import {Modal, Tooltip, Button, OverlayTrigger, Popover,} from "react-bootstrap";
+import {Modal, Tooltip, Button, OverlayTrigger, Popover, FormControl, Form, FormGroup} from "react-bootstrap";
 import { Link } from "react-router-dom";
+// import { start } from "repl";
+import "./Login.css";
 
 
 
@@ -16,8 +18,6 @@ constructor(props, context) {
   };
 }
 
-
-
 handleClose() {
   this.setState({ show: false });
 }
@@ -25,38 +25,46 @@ handleClose() {
 handleShow() {
   this.setState({ show: true });
 }
-render(){
 
-const popover = (
-  <Popover id="modal-popover" title="popover">
-    very popover. such engagement
-  </Popover>
-);
-const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+FormGroup({ id, label, help, ...props }) {
+  return (
+    <FormGroup controlId={id}>
+      {/* <ControlLabel>{label}</ControlLabel> */}
+      <FormControl {...props} />
+      {/* {help && <HelpBlock>{help}</HelpBlock>} */}
+    </FormGroup>
+  );
+}
 
-const formInstance = (
-  <form>
-    <FieldGroup
-      id="formControlsText"
-      type="text"
-      label="Text"
-      placeholder="Enter text"
-    />
-    <FieldGroup
-      id="formControlsEmail"
-      type="email"
-      label="Email address"
-      placeholder="Enter email"
-    />
-    <FieldGroup id="formControlsPassword" label="Password" type="password" />
-    <FieldGroup
-      id="formControlsFile"
-      type="file"
-      label="File"
-      help="Example block-level help text here."
-    />
-</form>
-)
+
+
+render() {
+
+  const formInstance = (
+    <form>
+     
+      <FormGroup
+        id="formControlsEmail"
+        type="email"
+        label="Email address"
+        placeholder="Enter email"
+      />
+      <FormGroup id="formControlsPassword" label="Password" type="password" />
+      <FormGroup
+        id="formControlsFile"
+        type="file"
+        label="File"
+        help="Example block-level help text here."
+      />
+      </form>
+  )
+
+// const popover = (
+//   <Popover id="modal-popover" title="popover">
+//     very popover. such engagement
+//   </Popover>
+// );
+// const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
 
 return (
   <div>
@@ -67,32 +75,19 @@ Login
     </p>
 
     <Modal show={this.state.show} onHide={this.handleClose}>
+    <p>Log in</p>
       <Modal.Header closeButton>
-        <Modal.Title>Log in</Modal.Title>
+       
       </Modal.Header>
       <Modal.Body>
-        <h4>Text in a modal</h4>
-        <p>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </p>
 
-        <h4>Popover in a modal</h4>
-        <p>
-          there is a{' '}
-          <OverlayTrigger overlay={popover}>
-            <a href="#popover">popover</a>
-          </OverlayTrigger>{' '}
-          here
-        </p>
+     
+       
+        
+        
+       
 
-        <h4>Tooltips in a modal</h4>
-        <p>
-          there is a{' '}
-          <OverlayTrigger overlay={tooltip}>
-            <a href="#tooltip">tooltip</a>
-          </OverlayTrigger>{' '}
-          here
-        </p>
+       
 
         <hr />
 
