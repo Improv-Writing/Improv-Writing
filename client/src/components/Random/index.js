@@ -8,6 +8,16 @@ class Random extends React.Component{
     results: []
   };
 
+  	constructor(){
+  		super();
+  		this.passImageUp= this.passImageUp.bind(this);
+  	}
+
+  	passImageUp(){
+  		this.props.onImageClick(this);
+  		console.log("passImageUp fired");
+  	}
+
 	componentDidMount() {
     this.randomGiphy("kids random");
   }
@@ -19,9 +29,20 @@ class Random extends React.Component{
   };
 	render(){
 		return(
-		<div> 
-			<img src={this.state.results.length && this.state.results[6].images.original.url}  style= {{width: 200,}} />
+		<div>
+			<button onClick={this.passImageUp}> 
+				<img 
+					alt= {this.props.title}
+					src={this.state.results.length && this.state.results[6].images.original.url}  
+					style= {{width: 200,}}
+					className= "img-fluid"
+				/>
+				 
+				
+			</button>
+
 		</div>
+
 		)
 	}
 }
