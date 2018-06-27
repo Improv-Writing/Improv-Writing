@@ -22,15 +22,15 @@ class Profile extends Component {
 
  getUser = () => {
     API.getUser()
-      .then(res => this.setState({ user: res.data.value }))
+      .then(res => this.setState({results: res.data}))
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <div>   
-     	<CardProfile />
-       <pre> {JSON.stringify(this.state.result, null, 4)}</pre>
+      <div> 
+      <CardProfile />
+       <pre> {JSON.stringify(this.state.results, null, 4)}</pre>
       </div>
     );
   }	

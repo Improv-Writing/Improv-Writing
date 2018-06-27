@@ -9,6 +9,8 @@ import "./CardProfile.css";
 
 const CardProfile = (props) => {
   return (
+    <div>
+      <p className ="yourProfile">Your profile:</p>
     <CardDeck> 
       <Card body outline color="secondary">
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
@@ -53,6 +55,7 @@ const CardProfile = (props) => {
         </CardBody>
       </Card>
     </CardDeck>
+    </div>
   );
 };
 
