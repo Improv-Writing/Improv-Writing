@@ -4,13 +4,18 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .find({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findById: function(req, res) {
+  findByName: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .find({ 'username':req.params.name})
+      .then(dbModel => 
+        {
+          dbModel[0]['password'] = undefined;
+          return dbModel;
+        })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

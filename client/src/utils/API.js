@@ -8,7 +8,7 @@ export default {
   search: function(query) {
     return axios.get(BASEURL + query + APIKEY);
   },
-  getUser: function(id) {
-    return axios.get("/api/user/"+ id);
+  getUser: function() {
+    return axios.get("/api/user/veryFirstUser");
   }
 };

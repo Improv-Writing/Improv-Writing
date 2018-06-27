@@ -32,15 +32,7 @@ class Login extends React.Component {
     this.setState({ show: true });
   }
 
-  // FieldGroup({ id, label, help, ...props }) {
-  //   return (
-  //     <FormGroup controlId={id}>
-  //       <ControlLabel>{label}</ControlLabel>
-  //       <FormControl {...props} />
-  //       {help && <HelpBlock>{help}</HelpBlock>}
-  //     </FormGroup>
-  //   );
-  // }
+  
 
   getValidationState() {
     const length = this.state.userNameInput.length;
@@ -60,32 +52,7 @@ class Login extends React.Component {
 
   render() {
 
-    // const formInstance = (
-    //   <form>
-
-    //     <FormGroup
-    //       id="formControlsEmail"
-    //       type="email"
-    //       label="Email address"
-    //       placeholder="Enter email"
-    //     />
-    //     <FormGroup id="formControlsPassword" label="Password" type="password" />
-    //     <FormGroup
-    //       id="formControlsFile"
-    //       type="file"
-    //       label="File"
-    //       help="Example block-level help text here."
-    //     />
-    //   </form>
-    // )
-
-    // const popover = (
-    //   <Popover id="modal-popover" title="popover">
-    //     very popover. such engagement
-    //   </Popover>
-    // );
-    // const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
-
+   
     return (
       <div>
 
