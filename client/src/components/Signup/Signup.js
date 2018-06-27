@@ -1,87 +1,113 @@
 import React from "react";
-import {Modal, Tooltip, Button, OverlayTrigger, Popover} from "react-bootstrap";
+import { Modal, Tooltip, Button, OverlayTrigger, Popover, FormControl, ControlLabel, HelpBlock, Form, FormGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
+// import { start } from "repl";
+import "./Signup.css";
 
 
 
+class Signup extends React.Component {
+  constructor(props, context) {
+    super(props, context);
 
-class Signup extends React.Component{
-constructor(props, context) {
-  super(props, context);
-
-  this.handleShow = this.handleShow.bind(this);
-  this.handleClose = this.handleClose.bind(this);
-
-  this.state = {
-    show: false
-  };
-}
-
-handleClose() {
-  this.setState({ show: false });
-}
-
-handleShow() {
-  this.setState({ show: true });
-}
-render(){
-
-const popover = (
-  <Popover id="modal-popover" title="popover">
-    very popover. such engagement
-  </Popover>
-);
-const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleUsernameChange = this.handleUsernameChange.bind(this);
 
 
-return (
-  <div>
-    
 
-    <p  onClick={this.handleShow}>
-     Signup
-    </p>
+    this.state = {
+      show: false,
+      userNameInput:'',
+      passwordInput:''
+    };
+  }
 
-    <Modal show={this.state.show} onHide={this.handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>Sign up!</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Text in a modal</h4>
-        <p>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </p>
+  handleClose() {
+    this.setState({ show: false });
+  }
 
-        <h4>Popover in a modal</h4>
-        <p>
-          there is a{' '}
-          <OverlayTrigger overlay={popover}>
-            <a href="#popover">popover</a>
-          </OverlayTrigger>{' '}
-          here
-        </p>
-
-        <h4>Tooltips in a modal</h4>
-        <p>
-          there is a{' '}
-          <OverlayTrigger overlay={tooltip}>
-            <a href="#tooltip">tooltip</a>
-          </OverlayTrigger>{' '}
-          here
-        </p>
-
-        <hr />
-
-       
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={this.handleClose}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  </div>
+  handleShow() {
+    this.setState({ show: true });
+  }
 
   
-);
-}
+
+  getValidationState() {
+    const length = this.state.userNameInput.length;
+    if (length > 10) return 'success';
+    else if (length > 5) return 'warning';
+    else if (length > 0) return 'error';
+    return null;
+  }
+
+  handleUsernameChange(e) {
+    this.setState({ userNameInput: e.target.value });
+  }
+
+  handlePasswordChange(e) {
+    this.setState({ passwordInput: e.target.value });
+  }
+
+  render() {
+
+   
+    return (
+      <div>
+
+
+        <p onClick={this.handleShow}>
+          Sign up
+    </p>
+
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          
+
+          <Modal.Body>
+
+            <form>
+              <FormGroup
+                controlId="formBasicText"
+                validationState={this.getValidationState()}
+              >
+                <ControlLabel>Create Your Username:</ControlLabel>
+                <FormControl
+                  type="text"
+                  value={this.state.userNameInput}
+                  placeholder="Enter username"
+                  onChange={this.handleUsernameChange}
+                />
+                <ControlLabel>Create Your Password:</ControlLabel>
+                <FormControl
+                  type="text"
+                  value={this.state.passwordInput}
+                  placeholder="Enter password"
+                  onChange={this.handlePasswordChange}
+                />
+                <ControlLabel>Confirm Your Password:</ControlLabel>
+                <FormControl
+                  type="text"
+                  value={this.state.passwordInput}
+                  placeholder="Enter password"
+                  onChange={this.handlePasswordChange}
+                />
+                <FormControl.Feedback />
+                <HelpBlock>Validation is based on string length.</HelpBlock>
+              </FormGroup>
+
+              <Button type="submit">Submit</Button>
+            </form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.handleClose}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+
+
+    );
+  }
 }
 
 
