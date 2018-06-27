@@ -22,7 +22,7 @@ class Profile extends Component {
 
  getUser = () => {
     API.getUser()
-      .then(res => this.setState({ results: res.data }))
+      .then(res => this.setState({ user: res.data.value }))
       .catch(err => console.log(err));
   };
 
@@ -30,7 +30,7 @@ class Profile extends Component {
     return (
       <div>   
      	<CardProfile />
-       <pre> {JSON.stringify(this.state.results, null, 4)}</pre>
+       <pre> {JSON.stringify(this.state.result, null, 4)}</pre>
       </div>
     );
   }	

@@ -9,6 +9,6 @@ export default {
     return axios.get(BASEURL + query + APIKEY);
   },
   getUser: function(id) {
-    return axios.get("/api/user/"+id);
+    return axios.get("/api/user/"+ id);
   }
 };
