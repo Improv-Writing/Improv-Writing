@@ -9,17 +9,32 @@ findAll: function (req, res) {
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 },
-findByName: function (req, res) {
-  db.User
-    .find({
-      'username': req.params.name
+
+myStories: function (req, res) {
+  if(req.user){
+    db.User.find({
+      username: req.user["username"]
     })
     .then(dbModel => {
-      dbModel[0]['password'] = undefined;
-      return dbModel;
+      dbModel[0]["password"] = undefined;
+      return dbModel
     })
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
+  }else{
+    res.status(422).json({error:'Login required'})
+  }
+
+  // db.User
+  //   .find({
+  //     'username': req.params.name
+  //   })
+  //   .then(dbModel => {
+  //     dbModel[0]['password'] = undefined;
+  //     return dbModel;
+  //   })
+  //   .then(dbModel => res.json(dbModel))
+  //   .catch(err => res.status(422).json(err));
 },
 
 signUp: function (req, res) {
@@ -49,41 +64,42 @@ logOut: function (req, res) {
 },
 
 logIn:
-// function (req, res, next) {
+function (req, res, next) {
 
-  passport.authenticate('local', {}),
-    function (req, res) {
-      res.redirect('/');
-    }
-
-  // passport.authenticate("local", {},function (err, user, info) {
-  // console.log(info);
-  // if (err) {
-  //   return next(err);
-  // }
-  // if (!user) {
-  //   return res.send({
-  //     response: 'failure',
-  //     message: "Username and password combination is not correct"
-  //   })
-  // }
-  // req.logIn(user, function (err) {
-  //   if (err) {
-  //     return next(err);
+  // passport.authenticate('local', {}),
+  //   function (req, res) {
+  //     res.redirect('/');
   //   }
-  //   //remove password from data
-  //   user['password'] = undefined;
-  //   //save to session
-  //   req.session.loggedIn = true;
-  // return res.send({
-  // response: 'success',
-  // message: 'You are logged in!',
-  // user: user
-// })
-// 
-// })
-// })
-// }
+
+  passport.authenticate("local", {},function (err, user, info) {
+  console.log(info);
+  if (err) {
+    return next(err);
+  }
+  if (!user) {
+    return res.send({
+      response: 'failure',
+      message: "Username and password combination is not correct"
+    })
+  }
+  req.logIn(user, function (err) {
+    if (err) {
+      return next(err);
+    }
+    //remove password from data
+    user['password'] = undefined;
+    //save to session
+    req.session.loggedIn = true;
+  return res.send({
+  response: 'success',
+  message: 'You are logged in!',
+  user: user
+})
+
+})
+}) (req,res,next);
+},
+
 
 
 // db.User
