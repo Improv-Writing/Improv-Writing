@@ -30,6 +30,7 @@ class Profile extends Component {
     return (
       <div> 
       <CardProfile user={this.state.results} />
+      
        <pre> {JSON.stringify(this.state.results, null, 4)}</pre>
       </div>
     );
