@@ -34,4 +34,7 @@
 
 .card {
 	box-shadow: 10px 10px 20px grey;
+	font-family: Gloria Hallelujah, cursive;
+	font-weight: bold;
+	font-size: 17px;
 }

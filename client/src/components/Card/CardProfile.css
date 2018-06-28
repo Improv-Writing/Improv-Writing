@@ -3,6 +3,21 @@ p.yourProfile {
   text-align: center;
   font-family: Paytone One, sans-serif; 
   color: steelBlue;
-  font-size: 30; 
+  margin-top: 25px;
+  margin-bottom: 25px;
   text-shadow: 2px 2px 6px black;
+}
+
+.title{
+	font-family: Payton One, sans-serif; 
+	color: steelBlue; 
+	font-size: 22px; 
+	font-weight: bold;
+}
+
+.subTitle{
+	font-family: Payton One, sans-serif; 
+	color: steelBlue; 
+	font-size: 15px; 
+	font-weight: bold;
 }
