@@ -97,7 +97,7 @@ class Signup extends React.Component {
                 <FormControl
                   type="text"
                   value={this.state.passwordInput}
-                  placeholder="Enter password"
+                  placeholder="Enter email"
                   onChange={this.handlePasswordChange}
                 />
                 <FormControl.Feedback />

@@ -6,3 +6,7 @@
   margin: 5px;
   float: right;
 }
+
+.authorName {
+  font-size: 3em;
+}
