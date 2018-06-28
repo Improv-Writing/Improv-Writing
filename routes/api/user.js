@@ -15,8 +15,8 @@ router.route("/logIn")
   router.route("/signUp")
   .post(usersController.signUp);
 
-  // router.route("/myStories")
-  // .get(usersController.myStories);
+  router.route("/myStories")
+  .get(usersController.myStories);
 
   // router.route("/publicStories")
   // .get(usersController.publicStories);
@@ -38,8 +38,8 @@ router.route("/logIn")
 
 
 // Matches with "/api/users/:name"
-router.route("/:name")
-  .get(usersController.findByName);
+// router.route("/:name")
+//   .get(usersController.findByName);
   // .post(usersController.create);
 
 // Matches with "/api/stories/:id"
