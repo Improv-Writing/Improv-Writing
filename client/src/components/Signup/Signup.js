@@ -54,10 +54,11 @@ class Signup extends React.Component {
 
    
     return (
-      <div>
+      <div style={{paddingLeft: 670}}>
 
 
-        <p onClick={this.handleShow}>
+        <p onClick={this.handleShow} >
+
           Sign up
     </p>
 

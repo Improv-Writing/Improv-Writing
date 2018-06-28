@@ -1,4 +1,8 @@
 p.yourProfile {
   font-size: 3em;
   text-align: center;
+  font-family: Paytone One, sans-serif; 
+  color: steelBlue;
+  font-size: 30; 
+  text-shadow: 2px 2px 6px black;
 }

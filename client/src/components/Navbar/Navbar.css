@@ -1,5 +1,7 @@
 nav.navbar {
-  background-color: rgba(102, 255, 140);
+   background: linear-gradient(to top right, rgba(102, 255, 140), skyblue);
   border-bottom: 4px solid;
   margin: 0px;
+  font-family: 'Paytone One', sans-serif;
+  box-shadow: 10px 10px 20px grey;
 }

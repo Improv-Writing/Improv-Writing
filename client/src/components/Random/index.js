@@ -42,7 +42,7 @@ class Random extends React.Component{
 					<img 
 						alt= {this.props.title}
 						src={this.state.results.length && this.state.results[6].images.original.url}  
-						style= {{width: 200,}}
+						style= {{width: 200, webkitBoxShadow: "0 1px 20px 10px black"}}
 						className= "img-fluid"
 					/>
 

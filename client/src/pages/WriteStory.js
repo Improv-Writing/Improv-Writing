@@ -66,16 +66,16 @@ class WriteStory extends Component {
               alt={this.state.imageClicked.title}
               className="img-fluid"
               src={this.state.imageClicked.src}
-              style= {{height: 300,}}
+              style= {{height: 300, webkitBoxShadow: "0 1px 20px 10px black",}}
             />
             <form onSubmit={this.handleSubmit} >
               <label>
             
-          <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story!" 
-            style={{height: 300, width: 533, marginTop: 30, marginLeft: 0, marginBottom: 100, }}/>
+          <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story based on your giphy!" 
+            style={{height: 300, width: 533, marginTop: 30, marginLeft: 0, marginBottom: 100, fontFamily: "Gloria Hallelujah, cursive", fontSize: 20, }}/>
               </label>
               <input type="submit" value="Submit" 
-                style={{position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, borderRadius: 6,}}/>
+                style={{position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, borderRadius: 6, boxShadow: "10px 10px 20px grey"}}/>
             </form>
           </div>
 

@@ -25,6 +25,7 @@ class GifImage extends React.Component {
           alt={this.props.title}
           className="img-fluid"
           src={this.props.src}
+          style={{webkitBoxShadow: "0 1px 20px 10px black"}}
         />
         </button>
         // </Col>
