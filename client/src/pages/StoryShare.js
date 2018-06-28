@@ -14,7 +14,7 @@ class StoryShare extends Component {
   render() {
     return (
       <div>
-      <div style= {{marginTop: 20, fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 35, textAlign: "center", textShadow: "2px 2px 6px black",}}>
+      <div style= {{marginTop: 20, fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 40, textAlign: "center", textShadow: "2px 2px 6px black",}}>
       Gifstories from authors just like you:
     	</div>
      <CardStoryShare />

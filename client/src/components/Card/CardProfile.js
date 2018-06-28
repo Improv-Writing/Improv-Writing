@@ -15,42 +15,42 @@ const CardProfile = (props) => {
       <Card body outline color="secondary">
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardTitle className="title">Card Title</CardTitle>
+          <CardSubtitle className="subTitle">Card subtitle</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
           <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
-          <Button color="primary">Share</Button>{' '}
-          <Button color="danger">Delete</Button>
+          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
+          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
             { /* <DeleteBtn />*/ } 
         </CardBody>
       </Card>
       <Card body outline color="secondary">
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardTitle className= "title">Card Title</CardTitle>
+          <CardSubtitle className="subTitle">Card subtitle</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
           <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
-          <Button color="primary">Share</Button>{' '}
-          <Button color="danger">Delete</Button>
+          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
+          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
             { /* <DeleteBtn />*/ } 
         </CardBody>
       </Card>
       <Card body outline color="secondary">
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardTitle className= "title">Card Title</CardTitle>
+          <CardSubtitle className="subTitle">Card subtitle</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
           <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
-          <Button color="primary">Share</Button>{' '}
-          <Button color="danger">Delete</Button>
+          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
+          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
             { /* <DeleteBtn />*/ } 
         </CardBody>
       </Card>
