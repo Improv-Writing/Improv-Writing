@@ -10,6 +10,21 @@ findAll: function (req, res) {
     .catch(err => res.status(422).json(err));
 },
 
+publicStories: function (req, res) {
+  db.User
+    .find({
+      "stories.storyShare": true
+    })
+    .then(dbModel => {
+      for(i = 0; i< dbModel.length; i++){
+        dbModel[i]["password"] = undefined;
+      }
+      return dbModel
+    })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+},
+
 myStories: function (req, res) {
   if(req.user){
     db.User.find({
@@ -24,17 +39,6 @@ myStories: function (req, res) {
   }else{
     res.status(422).json({error:'Login required'})
   }
-
-  // db.User
-  //   .find({
-  //     'username': req.params.name
-  //   })
-  //   .then(dbModel => {
-  //     dbModel[0]['password'] = undefined;
-  //     return dbModel;
-  //   })
-  //   .then(dbModel => res.json(dbModel))
-  //   .catch(err => res.status(422).json(err));
 },
 
 signUp: function (req, res) {

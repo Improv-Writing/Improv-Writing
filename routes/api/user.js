@@ -18,13 +18,10 @@ router.route("/logIn")
   router.route("/myStories")
   .get(usersController.myStories);
 
-  // router.route("/publicStories")
-  // .get(usersController.publicStories);
+  router.route("/publicStories")
+  .get(usersController.publicStories);
 
-  // router.route("/comments")
-  // .post(usersController.);
-
-  // router.route("/saveStory")
+    // router.route("/saveStory")
   // .post(usersController.comments);
 
   // router.route("/like")
@@ -36,19 +33,5 @@ router.route("/logIn")
   // router.route("/getGifs")
   // .get(usersController.getGifs);
 
-
-// Matches with "/api/users/:name"
-// router.route("/:name")
-//   .get(usersController.findByName);
-  // .post(usersController.create);
-
-// Matches with "/api/stories/:id"
-// router
-//   .route("/:id")
-//   .get(usersController.findById)
-//   .post(usersController.create);
-//   // .get(usersController.findById)
-//   // .put(usersController.update)
-//   // .delete(usersController.remove);
 
 module.exports = router;
