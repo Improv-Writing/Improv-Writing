@@ -21,8 +21,8 @@ const CardProfile = (props) => {
           <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
-          <Button color="primary">Share</Button>{' '}
-          <Button color="danger">Delete</Button>
+          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
+          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
             { /* <DeleteBtn />*/ } 
         </CardBody>
       </Card>
@@ -35,8 +35,8 @@ const CardProfile = (props) => {
           <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
-          <Button color="primary">Share</Button>{' '}
-          <Button color="danger">Delete</Button>
+          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
+          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
             { /* <DeleteBtn />*/ } 
         </CardBody>
       </Card>
@@ -49,8 +49,8 @@ const CardProfile = (props) => {
           <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>
           </CardText>
-          <Button color="primary">Share</Button>{' '}
-          <Button color="danger">Delete</Button>
+          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
+          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
             { /* <DeleteBtn />*/ } 
         </CardBody>
       </Card>

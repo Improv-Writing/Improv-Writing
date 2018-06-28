@@ -8,7 +8,7 @@ import emoji from 'react-easy-emoji';
 const CardStoryShare = (props) => {
   return (
 
-    <CardDeck style={{marginTop: 40,}}> 
+    <CardDeck style={{marginTop: 20,}}> 
       <Card body outline color="secondary" >
           <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 6px black",}}>Author:</CardTitle>
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
