@@ -51,7 +51,7 @@ const App = () => (
         <p style= {{marginBottom: 40, fontFamily: "Gloria Hallelujah, cursive", fontSize: 25,}}>sublime</p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 20, fontFamily: "Paytone One, sans-serif", color: "red", fontSize: 25, textShadow: "2px 2px 6px black",}}>Image of the Day:</p>
+        <p style= {{marginBottom: 20, fontFamily: "Paytone One, sans-serif", color: "seaGreen", fontSize: 25, textShadow: "2px 2px 6px black",}}>Image of the Day:</p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
         <p style= {{marginBottom: 40,}}>
@@ -59,7 +59,11 @@ const App = () => (
         </p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 60, fontFamily: "Paytone One, sans-serif", color: "teal", fontSize: 25, textShadow: "2px 2px 6px black",}}>About Us | Contact</p>
+        <p style= {{marginBottom: 60, fontFamily: "Paytone One, sans-serif", color: "teal", fontSize: 25, textShadow: "2px 2px 6px black",}}>
+          <a href="mailto:Gifstories2018@gmail.com">
+          About Us | Contact
+          </a>
+        </p>
       </Row>
 
 
