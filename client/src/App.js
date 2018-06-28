@@ -33,7 +33,8 @@ const App = () => (
 
         {/* /* these are login only */}
         <Route exact path="/Profile" component={Profile} />
-        <Route path="/WriteStory" component={WriteStory} />
+        <Route exact path="/WriteStory" component={WriteStory} />
+        <Route path="/WriteStory/:random" component={WriteStory} />
         <Route path="/NoMatch" component={NoMatch} />
 
         {/* <Route component={NoMatch} /> */}

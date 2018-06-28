@@ -19,6 +19,24 @@ class WriteStory extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
    
   }
+  componentDidMount() {
+    this.checkRandom()
+  }
+
+  componentWillReceivesProps(){
+    this.checkRandom()
+  }
+  checkRandom= () => {
+    const randomImage= this.props.match.params.random;
+    if (randomImage) {
+      this.setState({
+        imageClicked: { 
+          title: "Random Image",
+          src: "https://media3.giphy.com/media/" + randomImage +"/giphy.gif"
+        }
+      })
+    }
+  }
 
   handleChange(event) {
     this.setState({ textValue: event.target.value });
@@ -41,7 +59,7 @@ class WriteStory extends Component {
 
   render() {
     return (
-      <div>
+      <div key={this.props.match.params.random}>
         {this.state.imageClicked ? (
           <div style= {{marginLeft: 350, marginTop: 50,}}>
             <img
