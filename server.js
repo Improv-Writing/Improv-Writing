@@ -5,6 +5,11 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const test = require("./test.js");
+const passport = require("passport");
+const session = require("express-session");
+const passportConfig = require("./passportConfig.js");
+
+
 // const seedDB = require("./scripts/seedDB");
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,6 +18,15 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(session({
+  secret:'myfinalproject1',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {secure: false}
+}))
 // Add routes, both API and view
 app.use(routes);
 
