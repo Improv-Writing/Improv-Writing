@@ -40,26 +40,26 @@ const App = () => (
         {/* <Route component={NoMatch} /> */}
     </Switch></Col>
     <Col xs={8} md={2} style= {{
-      paddingLeft: 20, margin: 0, fontSize: 18, borderLeft: "solid", borderRight: "solid", backgroundColor: "#DCDCDC", minHeight: 100, }}>
-      <Row style= {{ marginBottom: 90, marginTop: 20, justifyContent: 'center', fontWeight: "bold",}}>
+      paddingLeft: 20, margin: 0, fontSize: 18, borderLeft: "solid", borderRight: "solid", backgroundColor: "#DCDCDC", minHeight: 100, webkitBoxShadow: "0 10px 20px 5px black" }}>
+      <Row style= {{ marginBottom: 60, marginTop: 30, justifyContent: 'center', fontFamily: "Paytone One, sans-serif", fontSize: 25, textShadow: "2px 2px 6px black",}}>
         <a href= "http://www.thesaurus.com/" target="_blank">Thesaurus</a>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{ marginBottom: 20, color: "blue", fontWeight: "bold", }}>Word of the Day: </p>
+        <p style= {{marginBottom: 20, fontFamily: "Paytone One, sans-serif", color: "coral", fontSize: 25, textShadow: "2px 2px 6px black",}}>Word of the Day: </p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 90,}}>sublime</p>
+        <p style= {{marginBottom: 40, fontFamily: "Gloria Hallelujah, cursive", fontSize: 25,}}>sublime</p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 20, color: "red", fontWeight: "bold",}}>Image of the Day:</p>
+        <p style= {{marginBottom: 20, fontFamily: "Paytone One, sans-serif", color: "red", fontSize: 25, textShadow: "2px 2px 6px black",}}>Image of the Day:</p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 90,}}>
+        <p style= {{marginBottom: 40,}}>
           <Random/>
         </p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{color: "green", fontWeight: "bold",}}>About Us | Contact</p>
+        <p style= {{marginBottom: 60, fontFamily: "Paytone One, sans-serif", color: "teal", fontSize: 25, textShadow: "2px 2px 6px black",}}>About Us | Contact</p>
       </Row>
 
 
@@ -68,7 +68,7 @@ const App = () => (
   </Row>
 </Grid>
     </Wrapper>
-    <Footer />
+    <Footer style={{boxShadow: "10px 10px -20px grey"}} />
     </div>
   </Router>
 

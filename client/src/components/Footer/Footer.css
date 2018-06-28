@@ -3,6 +3,9 @@
   background: #E5E5E5;
   position: relative;
   text-align: center;
+   -webkit-box-shadow: 0 -8px 20px -2px black;
+  border-top-style: solid;
+  
 }
 
 .footer span {
@@ -12,4 +15,5 @@
   right: 0;
   padding: 3px;
   background: #B8B8B8;
+  box-shadow: 10px 10px 20px grey;
 }

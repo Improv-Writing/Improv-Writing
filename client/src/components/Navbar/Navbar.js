@@ -6,8 +6,8 @@ import Signup from "../Signup";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props => (
-  <nav className="navbar navbar-expand-lg">
-    <Link className="navbar-brand" to="/">
+  <nav className="navbar navbar-expand-lg" style= {{fontSize: 30, }}>
+    <Link className="navbar-brand" to="/" style= {{fontSize: 40, textShadow: "2px 2px 8px black",}}>
       Home
     </Link>
     <div>
@@ -20,7 +20,7 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/WriteStory" className="nav-link">
+          <Link to="/WriteStory" className="nav-link" style= {{borderRight: "solid", textShadow: "2px 2px 6px black",}} >
            Write 
           </Link>
         </li>
@@ -32,7 +32,7 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/StoryShare" className="nav-link">
+          <Link to="/StoryShare" className="nav-link" style= {{borderRight: "solid", textShadow: "2px 2px 6px black",}}>
             Storyshare
           </Link>
         </li>
@@ -44,7 +44,7 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/Profile" className="nav-link">
+          <Link to="/Profile" className="nav-link" style= {{borderRight: "solid", textShadow: "2px 2px 6px black",}}>
             Profile
           </Link>
         </li>
@@ -55,7 +55,7 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/Login" className="nav-link">
+          <Link to="/Login" className="nav-link" style={{textShadow: "2px 2px 6px black",}}>
           <Login />
           </Link>
         </li>
@@ -67,7 +67,7 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/Signup" className="nav-link">
+          <Link to="/Signup" className="nav-link" style={{textShadow: "2px 2px 6px black",}}>
           <Signup />
           </Link>
         </li>

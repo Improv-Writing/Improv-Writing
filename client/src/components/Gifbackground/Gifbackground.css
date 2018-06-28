@@ -5,6 +5,9 @@
   position: relative;
   margin-top: 30px;
   margin-right: 20px;
+  border-style: solid;
+  outline: 2px solid;
+  -webkit-box-shadow: 0 1px 20px 10px black;
 }
 
 .gifbackground::after {
@@ -26,10 +29,13 @@
 
 .gifbackground h1, .gifbackground h2 {
   color: white;
+  text-shadow: 10px 10px 20px black;
+  font-family: 'Paytone One', sans-serif;
+
 }
 
 .gifbackground h1 {
-  font-size: 60px;
+  font-size: 100px;
   padding-top: 200px;
 
 }
