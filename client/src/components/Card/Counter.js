@@ -48,23 +48,23 @@ class CounterApp extends React.Component {
 			<div>
 				<div>
 					<button onClick={() => this.handleIncrementLike()} className = "buttonLike">
-						<span role="img">👍</span>
+						<span role="img" aria-label="Like">👍</span>
 						<div id="counterLike">{this.state.countLike}</div>
 					</button>
 					<button onClick={() => this.handleIncrementLove()} className = "buttonLove">
-						<span role="img">😍</span>
+						<span role="img" aria-label="Love">😍</span>
 						<div id="conterLove">{this.state.countLove}</div>
 					</button>
 					<button onClick={() => this.handleIncrementLol()} className = "buttonLol">
-						<span role="img">🤣</span>
+						<span role="img" aria-label="Lol">🤣</span>
 						<div id="counterLol">{this.state.countLol}</div>
 					</button>
 					<button onClick={() => this.handleIncrementScary()} className = "buttonScary">
-						<span role="img">😨</span>
+						<span role="img" aria-label="Scary">😨</span>
 						<div id="counterScary">{this.state.countScary}</div>
 					</button>
 					<button onClick={() => this.handleIncrementSad()} className = "buttonSad">
-						<span role="img">😭</span>
+						<span role="img" aria-label="Sad">😭</span>
 						<div id="counterSad">{this.state.countSad}</div>
 					</button>
 				</div>
