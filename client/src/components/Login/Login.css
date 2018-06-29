@@ -8,4 +8,5 @@ h4.modal-title {
   margin: 0px;
   font-family: 'Paytone One', sans-serif;
   box-shadow: 10px 10px 20px grey;
+  textShadow: "2px 2px 6px black";
 }

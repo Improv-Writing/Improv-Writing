@@ -86,13 +86,13 @@ class Signup extends React.Component {
                   placeholder="Enter password"
                   onChange={this.handlePasswordChange}
                 />
-                <ControlLabel>Confirm Your Password:</ControlLabel>
+                {/* <ControlLabel>Confirm Your Password:</ControlLabel>
                 <FormControl
                   type="text"
                   value={this.state.passwordInput}
                   placeholder="Enter password"
                   onChange={this.handlePasswordChange}
-                />
+                /> */}
                 {/* <ControlLabel>Please Enter Your Email:</ControlLabel>
                 <FormControl
                   type="text"
