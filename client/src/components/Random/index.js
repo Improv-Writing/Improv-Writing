@@ -5,7 +5,7 @@ import Container from "../Container";
 import Row from "../Row";
 import Col from "../Col";
 import WriteStory from "../../pages/WriteStory";
-
+//https://media.giphy.com/media/3beK2mJs3MwIcragTR/giphy.gif
 
 
 class Random extends React.Component{
@@ -34,7 +34,7 @@ class Random extends React.Component{
 	      .catch(err => console.log(err));
 	  };
 		render(){
-			const imageUrl = this.state.results[6] ? this.state.results[6].images.original.url.replace("https://media3.giphy.com/media/", "") : "";
+			const imageUrl = this.state.results[6] ? this.state.results[6].images.original.url.replace("https://media0.giphy.com/media/", "") : "";
 			return(
 			<div>
 				<Link to= {`/WriteStory/${imageUrl}`} className="nav-link">
