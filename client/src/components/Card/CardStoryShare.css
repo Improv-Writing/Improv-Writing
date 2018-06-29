@@ -8,28 +8,32 @@ img.emoji {
 .buttonLike {
   margin: 5px;
   float: left;
-  font-size: 20px;
+  width: 55px;
+  
 }
 
 .buttonLove {
   margin: 5px;
   float: left;
+  width: 55px;
 }
 
 .buttonLol{
 	margin: 5px;
 	float: left;
-	: 20px;
+	width: 55px;
 }
 
 .buttonScary{
 	margin: 5px;
 	float: left;
+	width: 55px;
 }
 
 .buttonSad{
 	margin: 5px;
 	float: left;
+	width: 55px;
 }
 
 .buttonOnFire{
