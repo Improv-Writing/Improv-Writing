@@ -41,7 +41,7 @@ const App = () => (
     </Switch></Col>
     <Col xs={8} md={2} style= {{
       paddingLeft: 20, margin: 0, fontSize: 18, borderLeft: "solid", borderRight: "solid", backgroundColor: "#DCDCDC", minHeight: 100, webkitBoxShadow: "0 10px 20px 5px black" }}>
-      <Row style= {{ marginBottom: 60, marginTop: 30, justifyContent: 'center', fontFamily: "Paytone One, sans-serif", fontSize: 25, textShadow: "2px 2px 4px black",}}>
+      <Row style= {{ marginBottom: 60, marginTop: 30, justifyContent: 'center', fontFamily: "Paytone One, sans-serif", fontSize: 28, textShadow: "2px 2px 3px black",}}>
         <a href= "http://www.thesaurus.com/" target="_blank">Thesaurus</a>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
@@ -59,7 +59,7 @@ const App = () => (
         </p>
       </Row>
       <Row style= {{justifyContent: 'center',}}>
-        <p style= {{marginBottom: 60, fontFamily: "Paytone One, sans-serif", color: "teal", fontSize: 25, textShadow: "2px 2px 4px black",}}>
+        <p style= {{marginBottom: 60, fontFamily: "Paytone One, sans-serif", color: "teal", fontSize: 25, textShadow: "2px 2px 3px black",}}>
           <a href="mailto:Gifstories2018@gmail.com">
           About Us | Contact
           </a>
