@@ -43,8 +43,11 @@ module.exports = {
 
  saveStory: function (req, res) {
     if (req.user) {
-      db.User.send({
-          username: req.user["username"]
+      db.User.insert({
+          username: req.user["username"],
+          storyText: req.storyText,
+          storyImgURL: req.storyImgURL
+
         })
         .then(dbModel => {
           dbModel[0]["password"] = undefined;

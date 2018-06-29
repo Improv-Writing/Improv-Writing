@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../../components/DeleteBtn";
 // import Jumbotron from "../../components/Jumbotron";
-// import API from "../../utils/API";
+import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import SearchResultContainer from "../components/SearchResultContainer";
 import Container from "../components/Container";
@@ -21,6 +21,7 @@ class WriteStory extends Component {
   }
   componentDidMount() {
     this.checkRandom()
+   
   }
 
   componentWillReceivesProps(){
@@ -43,8 +44,16 @@ class WriteStory extends Component {
   }
 
   handleSubmit(event) {
-    alert("Story submitted");
+    alert("Story submitted" + this.state.value);
     event.preventDefault();
+    this.setState({
+     storyText: [],
+     storyImageURL: ""
+    })
+    API.saveStory()
+    .then(function(res) {
+        alert(JSON.stringify(res.data, null, 4));
+    })
   }
 
   handleImageClick(value) {

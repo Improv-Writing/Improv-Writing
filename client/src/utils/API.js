@@ -21,11 +21,13 @@ export default {
   publicStories: function(){
     return axios.get("/api/user/publicStories");
   },
-  publicStories: function(){
-    return axios.get("/api/user/publicStories");
-  },
-  saveStory: function(){
-    return axios.post("/api/user/saveStory");
+ 
+  saveStory: function(username, storyText, storyImgURL){
+    return axios.post("/api/user/saveStory", {
+     username: username,
+     storyText: storyText,
+     storyImgURL: storyImgURL
+    });
   }
+  };
 
-};
