@@ -18,24 +18,42 @@ import {Grid, Col, Row} from "react-bootstrap";
 
 
 
+class App extends React.Component{
 
-const App = () => (
-  <Router >
+  constructor(props, context){
+    super(props, context);
+
+    this.state = {
+      user: null
+    }
+
+    this.handleLogIn = this.handleLogIn.bind(this);
+  }
+
+handleLogIn(event){
+
+
+}
+
+
+  render(){
+    return(
+      <Router >
     <div >
-      <Navbar />
+      <Navbar user={this.state.user}/>
       <Wrapper  >
       <Grid fluid= {true} style= {{marginLeft: 0, marginRight: 0, }}>
   <Row className="show-grid" >
     <Col xs={12} md={10} >
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/StoryShare" component={StoryShare}  />
+        <Route exact path="/" render={(props) => <Home {...props} user={this.state.user}/>} />
+        <Route exact path="/StoryShare" render={(props) => <StoryShare {...props} user={this.state.user}/>}  />
 
         {/* /* these are login only */}
-        <Route exact path="/Profile" component={Profile} />
-        <Route exact path="/WriteStory" component={WriteStory} />
-        <Route path="/WriteStory/:random" component={WriteStory} />
-        <Route path="/NoMatch" component={NoMatch} />
+        <Route exact path="/Profile" render={(props) => <Profile {...props} user={this.state.user}/>} />
+        <Route exact path="/WriteStory" render={(props) => <WriteStory {...props} user={this.state.user}/>} />
+        <Route path="/WriteStory/:random" render={(props) => <WriteStory {...props} user={this.state.user}/>}  />
+        <Route path="/NoMatch" render={(props) => <NoMatch {...props} user={this.state.user}/>}  />
 
         {/* <Route component={NoMatch} /> */}
     </Switch></Col>
@@ -75,6 +93,11 @@ const App = () => (
     <Footer style={{boxShadow: "10px 10px -20px grey"}} />
     </div>
   </Router>
+    )
+  }
+}
+// const App = () => (
+  
 
-);
+// );
 export default App;

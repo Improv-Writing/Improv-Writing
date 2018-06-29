@@ -55,9 +55,9 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/Login" className="nav-link" style={{textShadow: "2px 2px 6px black",}}>
-          <Login />
-          </Link>
+          
+          <Login style={{textShadow: "2px 2px 6px black",}}/>
+         
         </li>
        
         <li
@@ -67,9 +67,9 @@ const Navbar = props => (
               : "nav-item"
           }
         >
-          <Link to="/Signup" className="nav-link" style={{textShadow: "2px 2px 6px black",}}>
+         
           <Signup />
-          </Link>
+       
         </li>
         
 

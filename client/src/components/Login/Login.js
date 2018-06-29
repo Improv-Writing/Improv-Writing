@@ -3,6 +3,7 @@ import { Modal, Tooltip, Button, OverlayTrigger, Popover, FormControl, ControlLa
 import { Link } from "react-router-dom";
 // import { start } from "repl";
 import "./Login.css";
+import API from "../../utils/API";
 
 
 
@@ -14,6 +15,7 @@ class Login extends React.Component {
     this.handleClose = this.handleClose.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
 
 
@@ -50,6 +52,18 @@ class Login extends React.Component {
     this.setState({ passwordInput: e.target.value });
   }
 
+  handleSubmit(event){
+    event.preventDefault();
+    API.logIn(this.state.userNameInput, this.state.passwordInput)
+    .then(
+      function(res) {
+        alert(JSON.stringify(res.data, null, 4));
+      }
+    
+    )
+
+  }
+
   render() {
 
    
@@ -57,16 +71,16 @@ class Login extends React.Component {
       <div>
 
 
-        <p onClick={this.handleShow}>
+        <div className = "logIn" onClick={this.handleShow}>
           Login
-    </p>
+    </div>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           
 
           <Modal.Body>
 
-            <form>
+            <form onSubmit = {this.handleSubmit}>
               <FormGroup
                 controlId="formBasicText"
                 validationState={this.getValidationState()}

@@ -10,5 +10,17 @@ export default {
   },
   getUser: function() {
     return axios.get("/api/user/veryFirstUser");
+  },
+
+  logIn: function(username, password) {
+    return axios.post("/api/user/logIn", {
+      username: username,
+      password: password
+          })
+  },
+  publicStories: function(){
+    return axios.get("/api/user/publicStories");
   }
+
+
 };
