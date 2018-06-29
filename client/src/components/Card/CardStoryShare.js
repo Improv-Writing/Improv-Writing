@@ -26,7 +26,7 @@ const CardStoryShare = (props) => {
         <CardImg top width="100%" src="https://media.giphy.com/media/l4FGni1RBAR2OWsGk/giphy.gif" alt="Card image cap" />
         <CardBody>
           {/* <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle> */}
-          <CardText>   Thor warily entered the coliseum-like arena that he'd been thrown into on the strange alien planet Saakar, geared head to toe for battle. 
+          <CardText>   Thor warily entered the coliseum arena that he'd been thrown into on the strange alien planet Saakar, geared head to toe for battle. 
    As the spectators grew silent in anticipation, the God of Lightning wondered who, or even what, he was up against. 
    However, as the big lumbering green figure lurched out into the light before him, Thor's caution instantly vanished and excitement overwhelmed him to his core. 
     He knew this fellow. 
