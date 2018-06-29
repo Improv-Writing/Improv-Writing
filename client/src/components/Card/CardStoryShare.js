@@ -16,11 +16,11 @@ const CardStoryShare = (props) => {
         <CardBody >
           <CardSubtitle  style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button className = "buttonLike"><span role="img">👍</span> 12</Button>  
-          <Button  className = "buttonLove"><span role="img"> 😍</span>  23</Button>
-          <Button className= "buttonLol"><span role="img">🤣</span>  8</Button>
-          <Button className= "buttonScary"><span role="img">😨</span>  0</Button>
-          <Button className= "buttonSad"><span role="img">😭</span>  0</Button>
+          <Button className = "buttonLike"><span role="img">👍</span><div id="counter"> 12</div></Button>  
+          <Button  className = "buttonLove"><span role="img"> 😍</span><div id="counter">  23</div></Button>
+          <Button className= "buttonLol"><span role="img">🤣</span><div id="counter">  8</div></Button>
+          <Button className= "buttonScary"><span role="img">😨</span><div id="counter">  0</div></Button>
+          <Button className= "buttonSad"><span role="img">😭</span><div id="counter">  0</div></Button>
           
           
         </CardBody>
@@ -31,11 +31,11 @@ const CardStoryShare = (props) => {
         <CardBody>
           <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle>
           <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-          <Button className = "buttonLike"><span role="img">👍</span> 8</Button>  
-          <Button  className = "buttonLove"><span role="img">😍</span> 15</Button>
-          <Button className= "buttonLol"><span role="img">🤣</span> 0</Button>
-          <Button className= "buttonScary"><span role="img">😨</span> 34</Button>
-          <Button className= "buttonSad"><span role="img">😭</span> 0</Button>
+          <Button className = "buttonLike"><span role="img">👍</span> <div id="counter">8</div></Button>  
+          <Button  className = "buttonLove"><span role="img">😍</span><div id="counter"> 15</div></Button>
+          <Button className= "buttonLol"><span role="img">🤣</span><div id="counter"> 0</div></Button>
+          <Button className= "buttonScary"><span role="img">😨</span><div id="counter"> 34</div></Button>
+          <Button className= "buttonSad"><span role="img">😭</span><div id="counter"> 0</div></Button>
           
           </CardBody>
       </Card>
@@ -45,11 +45,11 @@ const CardStoryShare = (props) => {
         <CardBody>
           <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle>
           <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button className = "buttonLike"><span role="img"> 👍</span>  22</Button>  
-          <Button  className = "buttonLove"><span role="img">😍</span>  3</Button>
-          <Button className= "buttonLol"><span role="img">🤣</span>  0</Button>   
-          <Button className= "buttonScary"><span role="img">😨</span>  0</Button>
-          <Button className= "buttonSad"><span role="img">😭</span>  29</Button>
+          <Button className = "buttonLike"><span role="img"> 👍</span><div id="counter"> 22</div></Button>  
+          <Button  className = "buttonLove"><span role="img">😍</span><div id="counter"> 3</div></Button>
+          <Button className= "buttonLol"><span role="img">🤣</span><div id="counter"> 0</div></Button>   
+          <Button className= "buttonScary"><span role="img">😨</span><div id="counter"> 0</div></Button>
+          <Button className= "buttonSad"><span role="img">😭</span><div id="counter"> 29</div></Button>
                
         </CardBody>
       </Card>
