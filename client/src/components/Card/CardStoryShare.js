@@ -12,7 +12,7 @@ const CardStoryShare = (props) => {
 
     <CardDeck style={{marginTop: 20,}}> 
       <Card body outline color="secondary" >
-          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 6px black",}}>Author: Terra_Angel1234</CardTitle>
+          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: Terra_Angel1234</CardTitle>
         <CardImg top width="100%" src="https://media0.giphy.com/media/pB6Nfy3n2Z2Zq/giphy.gif" alt="Card image cap" />
         <CardBody >
           <CardSubtitle  style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle>
@@ -22,7 +22,7 @@ const CardStoryShare = (props) => {
         </CardBody>
       </Card>
       <Card body outline color="secondary">
-          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 6px black",}}>Author: Drakeamus_Prime</CardTitle>
+          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: Drakeamus_Prime</CardTitle>
         <CardImg top width="100%" src="https://media1.giphy.com/media/eenzqB2MsGKbK/giphy.gif" alt="Card image cap" />
         <CardBody>
           <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle>
@@ -31,7 +31,7 @@ const CardStoryShare = (props) => {
           </CardBody>
       </Card>
       <Card body outline color="secondary">
-          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 6px black",}}>Author: InHisYouth</CardTitle>
+          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: InHisYouth</CardTitle>
         <CardImg top width="100%" src="https://media2.giphy.com/media/6T8wcUPfi8GDC/giphy.gif" alt="Card image cap" />
         <CardBody>
           <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle>
