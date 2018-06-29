@@ -27,6 +27,10 @@ router.route("/logIn")
   // router.route("/like")
   // .post(usersController.like);
 
+  // router.route("/name")
+  // .post(usersController.like);
+
+
   // router.route("/shareStory")
   // .post(usersController.shareStory);
 
