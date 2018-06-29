@@ -71,14 +71,14 @@ class Login extends React.Component {
                 controlId="formBasicText"
                 validationState={this.getValidationState()}
               >
-                <ControlLabel>Username:</ControlLabel>
+                <ControlLabel style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20}}>Username:</ControlLabel>
                 <FormControl
                   type="text"
                   value={this.state.userNameInput}
                   placeholder="Enter username"
                   onChange={this.handleUsernameChange}
                 />
-                <ControlLabel>Password:</ControlLabel>
+                <ControlLabel style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20}}>Password:</ControlLabel>
                 <FormControl
                   type="text"
                   value={this.state.passwordInput}

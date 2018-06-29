@@ -1,32 +1,46 @@
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+}
+
 .buttonLike {
   margin: 5px;
   float: left;
+  width: 55px;
+  
 }
 
 .buttonLove {
   margin: 5px;
   float: left;
+  width: 55px;
 }
 
 .buttonLol{
 	margin: 5px;
 	float: left;
+	width: 55px;
 }
 
 .buttonScary{
 	margin: 5px;
 	float: left;
+	width: 55px;
 }
 
 .buttonSad{
 	margin: 5px;
 	float: left;
+	width: 55px;
 }
 
 .buttonOnFire{
 	margin: 5px;
 	float: left;
 }
+
 
 .authorName {
   font-size: 3em;
