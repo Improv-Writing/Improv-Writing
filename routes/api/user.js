@@ -21,8 +21,8 @@ router.route("/logIn")
   router.route("/publicStories")
   .get(usersController.publicStories);
 
-    // router.route("/saveStory")
-  // .post(usersController.comments);
+    router.route("/saveStory")
+  .post(usersController.saveStory);
 
   // router.route("/like")
   // .post(usersController.like);

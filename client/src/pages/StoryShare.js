@@ -9,6 +9,13 @@ import CardStoryShare from "../components/Card/CardStoryShare.js";
 
 
 class StoryShare extends Component {
+constructor(props, context){
+  super(props, context);
+  this.state = {
+    publicStories: []
+  }
+} 
+
 
   componentDidMount(){
     API.publicStories()

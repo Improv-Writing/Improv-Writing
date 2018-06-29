@@ -20,7 +20,12 @@ export default {
   },
   publicStories: function(){
     return axios.get("/api/user/publicStories");
+  },
+  publicStories: function(){
+    return axios.get("/api/user/publicStories");
+  },
+  saveStory: function(){
+    return axios.post("/api/user/saveStory");
   }
-
 
 };

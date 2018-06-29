@@ -41,6 +41,30 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
+ saveStory: function (req, res) {
+    if (req.user) {
+      db.User.send({
+          username: req.user["username"]
+        })
+        .then(dbModel => {
+          dbModel[0]["password"] = undefined;
+          return dbModel
+          res.save({
+            success: true,
+           'message':'Story Submitted!'
+          })
+        })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+        
+    } else {
+      res.status(422).json({
+        error: 'Login required'
+      })
+    }
+  },
+
+
   myStories: function (req, res) {
     if (req.user) {
       db.User.find({
@@ -49,6 +73,7 @@ module.exports = {
         .then(dbModel => {
           dbModel[0]["password"] = undefined;
           return dbModel
+          res.send
         })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
