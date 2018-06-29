@@ -46,15 +46,17 @@ class WriteStory extends Component {
   handleSubmit(event) {
     alert("Story submitted" + this.state.value);
     event.preventDefault();
-    this.setState({
-     storyText: [],
-     storyImageURL: ""
-    })
-    API.saveStory()
-    .then(function(res) {
-        alert(JSON.stringify(res.data, null, 4));
-    })
-  }
+    if(this.state.storyText){
+      API.saveStory()({
+        storyText:this.state.storyText,
+        storyImageURL: this.state.storyImageURL
+      })
+    .then(res => this.loadStories())
+    .catch(err => console.log(err));
+     }
+    }
+    
+
 
   handleImageClick(value) {
     console.log("handleImageClick fired");
@@ -69,15 +71,17 @@ class WriteStory extends Component {
   render() {
     return (
       <div key={this.props.match.params.random}>
+      
         {this.state.imageClicked ? (
           <div style= {{marginLeft: 350, marginTop: 50,}}>
+           <form onSubmit={this.handleSubmit} >
             <img
               alt={this.state.imageClicked.title}
               className="img-fluid"
               src={this.state.imageClicked.src}
               style= {{height: 300, webkitBoxShadow: "0 1px 20px 10px black",}}
             />
-            <form onSubmit={this.handleSubmit} >
+           
               <label>
             
           <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story based on your giphy!" 

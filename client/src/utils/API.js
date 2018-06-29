@@ -21,13 +21,9 @@ export default {
   publicStories: function(){
     return axios.get("/api/user/publicStories");
   },
- 
-  saveStory: function(username, storyText, storyImgURL){
-    return axios.post("/api/user/saveStory", {
-     username: username,
-     storyText: storyText,
-     storyImgURL: storyImgURL
-    });
+//  save stories to database
+  saveStory: function(){
+    return axios.post("/api/user/stories");
   }
   };
 
