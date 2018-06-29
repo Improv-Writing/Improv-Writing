@@ -71,17 +71,15 @@ class WriteStory extends Component {
   render() {
     return (
       <div key={this.props.match.params.random}>
-      
         {this.state.imageClicked ? (
           <div style= {{marginLeft: 350, marginTop: 50,}}>
-           <form onSubmit={this.handleSubmit} >
             <img
               alt={this.state.imageClicked.title}
               className="img-fluid"
               src={this.state.imageClicked.src}
               style= {{height: 300, webkitBoxShadow: "0 1px 20px 10px black",}}
             />
-           
+            <form onSubmit={this.handleSubmit} >
               <label>
             
           <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story based on your giphy!" 

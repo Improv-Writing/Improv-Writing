@@ -26,17 +26,10 @@ function generateUsers(numberOfUsers, numberofStories) {
         storyText: faker.lorem.paragraph(),
         storyImgUrl: faker.internet.url(),
         storyImgName: faker.random.word(),
-        storyComments: [],
         storyShare: faker.random.boolean(),
         storyLikes: faker.random.number(2,1000)
       }
-        for (let h = 1; h<= numberofStories; h++) {
-          let comment = {
-            comment: faker.lorem.sentence()
-          }
-          story.storyComments.push(comment)
-        }
-      user.stories.push(story)
+       user.stories.push(story)
     }
     users.push(user)
 

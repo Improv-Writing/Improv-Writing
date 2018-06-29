@@ -43,7 +43,7 @@ module.exports = {
 
  saveStory: function (req, res) {
     if (req.user) {
-      db.User.insert({
+      db.User.post({
           username: req.user["username"],
           storyText: req.storyText,
           storyImgURL: req.storyImgURL
