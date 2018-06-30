@@ -5,6 +5,7 @@ h4.modal-title {
 .logIn{
   /*background: linear-gradient(to top right, rgba(102, 255, 140), skyblue);*/
   /*border-bottom: 4px solid;*/
+  float: left;
   margin-top: 3px;
   margin-left: 4px;
   font-family: 'Paytone One', sans-serif;

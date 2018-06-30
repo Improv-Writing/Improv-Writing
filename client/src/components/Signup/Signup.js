@@ -73,7 +73,7 @@ class Signup extends React.Component {
 
    
     return (
-      <div style={{paddingLeft: 670}}>
+      <div style={{ paddingLeft: 120}}>
 
 
         <p onClick={this.handleShow} style={{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 30, textShadow: "2px 2px 6px black",}}>
