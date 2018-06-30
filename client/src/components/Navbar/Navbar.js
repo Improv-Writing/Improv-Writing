@@ -27,7 +27,7 @@ const Navbar = props => (
                   : "nav-item"
               }
             >
-              <Link to="/WriteStory" className="nav-link" style={{ borderRight: "solid", textShadow: "2px 2px 6px black", }} >
+              <Link to="/WriteStory" className="nav-link" style={{ textShadow: "2px 2px 6px black", }} >
                 Write
           </Link>
             </li>
@@ -39,7 +39,7 @@ const Navbar = props => (
                   : "nav-item"
               }
             >
-              <Link to="/StoryShare" className="nav-link" style={{ borderRight: "solid", textShadow: "2px 2px 6px black", }}>
+              <Link to="/StoryShare" className="nav-link" style={{ textShadow: "2px 2px 6px black", }}>
                 Storyshare
           </Link>
             </li>
@@ -51,7 +51,7 @@ const Navbar = props => (
                   : "nav-item"
               }
             >
-              <Link to="/Profile" className="nav-link" style={{ borderRight: "solid", textShadow: "2px 2px 6px black", }}>
+              <Link to="/Profile" className="nav-link" style={{ textShadow: "2px 2px 6px black", }}>
                 Profile
           </Link>
             </li>
@@ -63,7 +63,7 @@ const Navbar = props => (
 
               }
             >
-              <p  style={{ textShadow: "2px 2px 6px black", }}  onClick={props.onLogOut}> LogOut</p>
+              <p  style={{color: "steelBlue", textShadow: "2px 2px 6px black", }}  onClick={props.onLogOut}> LogOut</p>
             </li>
             </div>
           ) : (
