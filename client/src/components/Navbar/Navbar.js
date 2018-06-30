@@ -10,15 +10,14 @@ const Navbar = props => (
     <Link className="navbar-brand" to="/" style={{ fontSize: 40, textShadow: "2px 2px 8px black", }}>
       Home
     </Link>
-    <div>
-      <ul className="navbar-nav">
-        <li>
-          </li>
+    <div className="contents">
+      
+        
 
         { //Conditional on login
           props.user != null ? (
             // if the user is logged in
-            <div>
+            <ul className="navbar-nav">
             <li
               className={
                 window.location.pathname === "/" ||
@@ -39,7 +38,7 @@ const Navbar = props => (
                   : "nav-item"
               }
             >
-              <Link to="/StoryShare" className="nav-link" style={{ textShadow: "2px 2px 6px black", }}>
+              <Link to="/StoryShare" className="nav-link" style={{ textShadow: "2px 2px 6px black", paddingLeft: 20, }}>
                 Storyshare
           </Link>
             </li>
@@ -51,7 +50,7 @@ const Navbar = props => (
                   : "nav-item"
               }
             >
-              <Link to="/Profile" className="nav-link" style={{ textShadow: "2px 2px 6px black", }}>
+              <Link to="/Profile" className="nav-link" style={{ textShadow: "2px 2px 6px black", paddingLeft: 20, }}>
                 Profile
           </Link>
             </li>
@@ -63,12 +62,13 @@ const Navbar = props => (
 
               }
             >
-              <p  style={{color: "steelBlue", textShadow: "2px 2px 6px black", }}  onClick={props.onLogOut}> LogOut</p>
+              <p  style={{color: "steelBlue", textShadow: "2px 2px 6px black", marginTop: 3, paddingLeft: 20}}  onClick={props.onLogOut}> LogOut</p>
             </li>
-            </div>
+            </ul>
+            
           ) : (
               //if the user is logged out
-              <div>
+              <ul className="navbar-nav">
 
                 <li
                   className={
@@ -92,13 +92,14 @@ const Navbar = props => (
                   <Signup />
 
                 </li>
-              </div>
+                </ul>
+              
             )
 
         }
 
 
-      </ul>
+      
     </div>
   </nav>
 );

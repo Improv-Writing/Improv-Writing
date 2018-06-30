@@ -4,6 +4,11 @@ nav.navbar {
   margin: 0px;
   font-family: 'Paytone One', sans-serif;
   box-shadow: 10px 10px 20px grey;
+
+}
+
+.contents{
+    width: 100%;
 }
 
 
