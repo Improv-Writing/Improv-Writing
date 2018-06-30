@@ -23,6 +23,7 @@ function generateUsers(numberOfUsers, numberofStories) {
 
     for (let j = 1; j<= numberofStories; j++) {
       let story = {
+        storyId: faker.random.number(),
         storyText: faker.lorem.paragraph(),
         storyImgUrl: faker.internet.url(),
         storyImgName: faker.random.word(),
