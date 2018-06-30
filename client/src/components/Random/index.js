@@ -34,7 +34,7 @@ class Random extends React.Component{
 	      .catch(err => console.log(err));
 	  };
 		render(){
-			const imageUrl = this.state.results[6] ? this.state.results[6].images.original.url.replace("https://media0.giphy.com/media/", "") : "";
+			const imageUrl = this.state.results[6] ? this.state.results[6].images.original.url.replace("https://media2.giphy.com/media/", "") : "";
 			return(
 			<div>
 				<Link to= {`/WriteStory/${imageUrl}`} className="nav-link">
