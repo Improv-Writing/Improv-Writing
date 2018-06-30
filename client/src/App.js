@@ -28,13 +28,19 @@ class App extends React.Component{
     }
 
     this.handleLogIn = this.handleLogIn.bind(this);
+    this.handleLogOut = this.handleLogOut.bind(this);
   }
 
 handleLogIn(user){
   this.setState({
     user: user
   })
-  alert(JSON.stringify(user));
+}
+
+handleLogOut(){
+  this.setState({
+    user: null
+  })
 }
 
 
@@ -42,7 +48,7 @@ handleLogIn(user){
     return(
       <Router >
     <div >
-      <Navbar user={this.state.user} onLogIn={this.handleLogIn}/>
+      <Navbar user={this.state.user} onLogIn={this.handleLogIn} onLogOut={this.handleLogOut} />
       <Wrapper  >
       <Grid fluid= {true} style= {{marginLeft: 0, marginRight: 0, }}>
   <Row className="show-grid" >

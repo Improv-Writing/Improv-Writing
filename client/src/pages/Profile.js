@@ -4,7 +4,8 @@ import React, { Component } from "react";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
 // import Example from "../components/Card/Test.js";
-import CardProfile from "../components/Card/CardProfile"
+import CardProfile from "../components/Card/CardProfile";
+import {Redirect } from 'react-router-dom';
 
 
 
@@ -29,9 +30,23 @@ class Profile extends Component {
   render() {
     return (
       <div> 
-      <CardProfile user={this.state.results} />
-      
-       <pre> {JSON.stringify(this.state.results, null, 4)}</pre>
+        {
+          //Conditional for login first logged in seccond not logged in
+          (this.props.user != null) ?(
+            // 
+            <div>
+            <p className ="yourProfile">Hello {this.props.user['username']} <span className="profileName"> ! </span></p>
+            <CardProfile user={this.state.results} />
+            
+             <pre> 
+             {/* {JSON.stringify(this.state.results, null, 4)}*/}
+           </pre> 
+           </div>
+          ):(
+            <Redirect to='/'/>
+          )
+        }
+
       </div>
     );
   }	
