@@ -34,10 +34,10 @@ module.exports = {
           }
           publicStories.push(userWithStories);
         }
-        res.json(publicStories)
+        res.json(publicStories);
         //   return publicStories;
       })
-      .then(dbModel => res.json(dbModel))
+      // .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
 
@@ -109,7 +109,6 @@ module.exports = {
         .then(dbModel => {
           dbModel[0]["password"] = undefined;
           return dbModel
-          res.send
         })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
@@ -181,6 +180,69 @@ module.exports = {
       })
     })(req, res, next);
   },
+
+  shareStory: function (req, res) {
+    if (req.user) {
+      db.User.find({
+        username: req.user["username"]
+      })
+      .then(dbModel =>{
+        for(i=0; i <dbModel[0]['stories'].length; i++){
+          if(dbModel[0]['stories'][i]['storyId'] == req.body.id){
+            dbModel[0]['stories'][i]['storyShare'] = true;
+          }
+        }
+        db.User.update(
+          {username:req.user['username']},
+           dbModel[0])
+        .then(
+          res.json({
+            success: true,
+            'message': 'Story Now Shared!'
+          })
+        )
+        .catch(err => res.status(422).json(err));
+
+      })
+      .catch(err => res.status(422).json(err));
+    } else {
+      res.status(422).json({
+        error: 'Login required'
+      })
+    }
+
+
+
+
+    // //collection of all public stories
+    // var publicStories = []
+    // db.User
+    //   .find({})
+    //   .then(dbModel => {
+    //     // dbModel = dbModel[0];
+    //     //   // console.log('another ' + dbModel[0].length);
+    //     //go through each user
+    //     for (var user in dbModel) {
+    //       //each user's public stories
+    //       var userStories = []
+    //       for (i = 0; i < dbModel[user]['stories'].length; i++) {
+    //         if (dbModel[user]['stories'][i]['storyShare'] == true) {
+    //           userStories.push(dbModel[user]['stories'][i])
+    //         }
+    //       }
+    //       var userWithStories = {
+    //         _id: dbModel[user]['_id'],
+    //         username: dbModel[user]['username'],
+    //         stories: userStories
+    //       }
+    //       publicStories.push(userWithStories);
+    //     }
+    //     res.json(publicStories);
+    //     //   return publicStories;
+    //   })
+    //   // .then(dbModel => res.json(dbModel))
+    //   .catch(err => res.status(422).json(err));
+  }
 
 
 

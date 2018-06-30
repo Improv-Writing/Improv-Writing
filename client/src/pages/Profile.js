@@ -5,7 +5,8 @@ import API from "../utils/API";
 // import { Link } from "react-router-dom";
 // import Example from "../components/Card/Test.js";
 import CardProfile from "../components/Card/CardProfile";
-import {Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { CardColumns } from 'reactstrap';
 
 
 
@@ -21,35 +22,45 @@ class Profile extends Component {
     this.getUser();
   }
 
- getUser = () => {
+  getUser = () => {
     API.getUser()
-      .then(res => this.setState({results: res.data}))
+      .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
 
   render() {
+    let userStories =[];
+    if(this.state.results.length != 0){
+      userStories = this.state.results[0]['stories']
+    }
+
     return (
-      <div> 
+      <div>
         {
           //Conditional for login first logged in seccond not logged in
-          (this.props.user != null) ?(
+          (this.props.user != null) ? (
             // 
             <div>
-            <p className ="yourProfile">Hello {this.props.user['username']} <span className="profileName"> ! </span></p>
-            <CardProfile user={this.state.results} />
-            
-             <pre> 
-             {/* {JSON.stringify(this.state.results, null, 4)}*/}
-           </pre> 
-           </div>
-          ):(
-            <Redirect to='/'/>
-          )
+              <p className="yourProfile">Hello {this.props.user['username']} <span className="profileName"> ! </span></p>
+              <CardColumns>
+                {
+                // alert(JSON.stringify(userStories, null, 4))
+                  userStories.map(story => (
+                  <CardProfile story={story} />
+
+                ))
+              }
+
+              </CardColumns>
+            </div>
+          ) : (
+              <Redirect to='/' />
+            )
         }
 
       </div>
     );
-  }	
+  }
 }
 
 export default Profile;

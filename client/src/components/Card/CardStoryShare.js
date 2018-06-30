@@ -10,40 +10,16 @@ import Counter from './Counter.js';
 const CardStoryShare = (props) => {
   return (
 
-    <CardDeck style={{marginTop: 20,}}> 
       <Card body outline color="secondary" >
-          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: Terra_Angel1234</CardTitle>
-        <CardImg top width="100%" src="https://media0.giphy.com/media/pB6Nfy3n2Z2Zq/giphy.gif" alt="Card image cap" />
+          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: {props.author}</CardTitle>
+        <CardImg top width="100%" src={props.story.storyImgUrl} alt={props.story.storyImgName} />
         <CardBody >
           {/* <CardSubtitle  style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle> */}
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+          <CardText>{props.story.storyText}</CardText>
           <Counter/>
           
         </CardBody>
       </Card>
-      <Card body outline color="secondary">
-          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: AbbyNormal</CardTitle>
-        <CardImg top width="100%" src="https://media.giphy.com/media/l4FGni1RBAR2OWsGk/giphy.gif" alt="Card image cap" />
-        <CardBody>
-          {/* <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle> */}
-          <CardText>   Thor warily entered the arena that he'd been thrown into on the strange alien planet Saakar, geared head to toe for battle. 
-   As the spectators grew silent in anticipation, the God of Lightning wondered who, or even what, he was up against. 
-   However, as the big lumbering green figure lurched out into the light before him, Thor's caution instantly vanished and excitement overwhelmed him to his core. 
-    He knew this fellow. 
-    He was a friend from work.</CardText>
-          <Counter/>
-          </CardBody>
-      </Card>
-      <Card body outline color="secondary">
-          <CardTitle style= {{fontFamily: "Paytone One, sans-serif", color: "steelBlue", fontSize: 25, textShadow: "2px 2px 4px black",}}>Author: InHisYouth</CardTitle>
-        <CardImg top width="100%" src="https://media2.giphy.com/media/6T8wcUPfi8GDC/giphy.gif" alt="Card image cap" />
-        <CardBody>
-          {/* <CardSubtitle style={{fontFamily: "Payton One, sans-serif", color: "steelBlue", fontSize: 20, fontWeight: "bold",}}>Title of the Story</CardSubtitle> */}
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Counter/>   
-        </CardBody>
-      </Card>
-    </CardDeck>
   );
 };
 

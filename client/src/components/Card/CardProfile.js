@@ -1,62 +1,47 @@
-import React from 'react';
-import { Card, Button, CardImg, CardHeader, CardBody,
-  CardTitle, CardText, CardDeck, CardSubtitle } from 'reactstrap';
+import React, { Component } from "react";
+import {
+  Card, Button, CardImg, CardHeader, CardBody,
+  CardTitle, CardText, CardDeck, CardSubtitle, CardColumns
+} from 'reactstrap';
 // import { DeleteBtn } from "./DeleteBtn/DeleteBtn.js";
 // import ".CardProfile.css";
 // import DeleteBtn from "../DeleteBtn";
 import PropTypes from "prop-types";
 import "./CardProfile.css";
+import Col from "../Col";
+import API from "../../utils/API";
 
-const CardProfile = (props) => {
-  return (
-    <div>
-      
-    <CardDeck> 
-      <Card body outline color="secondary">
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          {/* <CardTitle className="title">Card Title</CardTitle> */}
-          <CardSubtitle className="subTitle">Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <CardText>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText>
-          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
-          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
-            { /* <DeleteBtn />*/ } 
-        </CardBody>
-      </Card>
-      <Card body outline color="secondary">
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          {/* <CardTitle className= "title">Card Title</CardTitle> */}
-          <CardSubtitle className="subTitle">Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <CardText>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText>
-          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
-          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
-            { /* <DeleteBtn />*/ } 
-        </CardBody>
-      </Card>
-      <Card body outline color="secondary">
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          {/* <CardTitle className= "title">Card Title</CardTitle> */}
-          <CardSubtitle className="subTitle">Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <CardText>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText>
-          <Button style={{backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Share</Button>{' '}
-          <Button style={{backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey"}}>Delete</Button>
-            { /* <DeleteBtn />*/ } 
-        </CardBody>
-      </Card>
-    </CardDeck>
-    </div>
-  );
+class CardProfile extends Component {
+  constructor(){
+    super();
+    this.handleShareClick = this.handleShareClick.bind(this);
+  }
+
+
+  handleShareClick() {
+    console.log(this.props.story['storyId']);
+    API.shareStory(this.props.story['storyId'])
+      .then(res => alert('Your Story Shared!!!'))
+      .catch(err => console.log(err));
+  }
+  render() {
+    return (
+      <div>
+        <Card body outline color="secondary">
+          <CardImg top width="100%" src={this.props.story['storyImgUrl']} alt={this.props.story['storyImgName']} />
+          <CardBody>
+            {/* <CardTitle className="title">Card Title</CardTitle> */}
+            <CardText>{this.props.story['storyText']}</CardText>
+            <CardText>
+            </CardText>
+            <Button onClick = {this.handleShareClick} style={{ backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey" }}>Share</Button>{' '}
+            <Button style={{ backgroundColor: "red", color: "white", padding: 10, fontSize: 20, fontWeight: "bold", borderRadius: 6, boxShadow: "10px 10px 20px grey" }}>Delete</Button>
+            { /* <DeleteBtn />*/}
+          </CardBody>
+        </Card>
+      </div>
+    );
+  }
 };
 
 
