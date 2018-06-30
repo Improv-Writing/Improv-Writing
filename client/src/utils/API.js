@@ -5,30 +5,37 @@ const APIKEY = "&api_key=8BRi8Mur7x5UXHkxRh2ZfTVqOjpspRfl&limit=12&rating=pg";
 
 // Export an object with a "search" method than object with a "search" method that searches the Giphy API for the passed query
 export default {
-  search: function(query) {
+  search: function (query) {
     return axios.get(BASEURL + query + APIKEY);
   },
-  getUser: function() {
+  getUser: function () {
     return axios.get("/api/user/veryFirstUser");
   },
 
-  logIn: function(username, password) {
+  logIn: function (username, password) {
     return axios.post("/api/user/logIn", {
       username: username,
       password: password
-          })
+    })
   },
-  publicStories: function(){
+  publicStories: function () {
     return axios.get("/api/user/publicStories");
   },
-//  save stories to database
-  saveStory: function(id){
+  //  save stories to database
+  saveStory: function (id) {
     return axios.post("/api/user/saveStory" + id);
   },
+
+ signUp: function (username, password) {
+    return axios.post("/api/user/signUp", {
+      username: username,
+      password: password
+    })
+  }
+
 
   // deleteStory: function(id){
   //   return axios.delete("/api/user/deleteStory");
   // }
-  
-  };
 
+};

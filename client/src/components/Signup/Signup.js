@@ -3,7 +3,7 @@ import { Modal, Tooltip, Button, OverlayTrigger, Popover, FormControl, ControlLa
 import { Link } from "react-router-dom";
 // import { start } from "repl";
 import "./Signup.css";
-
+import API from "../../utils/API";
 
 
 class Signup extends React.Component {
@@ -14,6 +14,7 @@ class Signup extends React.Component {
     this.handleClose = this.handleClose.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
 
 
@@ -30,6 +31,24 @@ class Signup extends React.Component {
 
   handleShow() {
     this.setState({ show: true });
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
+    // alert('called sign up');
+    API.signUp(this.state.userNameInput, this.state.passwordInput)
+    .then(
+      function(res) {
+        if(res.data['success'] == true){
+          // onLogIn(res.data['user']);
+          alert("You signed up successfully!  Please log in.");
+        }
+        if(res.data['success'] != true){
+          alert("Please try different name and password.");
+        }
+      }
+  
+    )
   }
 
   
@@ -67,7 +86,7 @@ class Signup extends React.Component {
 
           <Modal.Body>
 
-            <form>
+            <form onSubmit ={this.handleSubmit}>
               <FormGroup
                 controlId="formBasicText"
                 validationState={this.getValidationState()}
