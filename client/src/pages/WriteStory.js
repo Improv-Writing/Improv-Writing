@@ -6,35 +6,37 @@ import API from "../utils/API";
 import SearchResultContainer from "../components/SearchResultContainer";
 import Container from "../components/Container";
 import { Grid, Col, Row } from "react-bootstrap";
+import {Redirect } from 'react-router-dom';
+
 
 class WriteStory extends Component {
   constructor() {
     super();
     this.state = {
       imageClicked: null,
-      
+
     };
     this.handleImageClick = this.handleImageClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-   
+
   }
   componentDidMount() {
     this.checkRandom()
     // this.handleSubmit()
-   
+
   }
 
-  componentWillReceivesProps(){
+  componentWillReceivesProps() {
     this.checkRandom()
   }
-  checkRandom= () => {
-    const randomImage= this.props.match.params.random;
+  checkRandom = () => {
+    const randomImage = this.props.match.params.random;
     if (randomImage) {
       this.setState({
-        imageClicked: { 
+        imageClicked: {
           title: "Random Image",
-          src: "https://media3.giphy.com/media/" + randomImage +"/giphy.gif"
+          src: "https://media3.giphy.com/media/" + randomImage + "/giphy.gif"
         }
       })
     }
@@ -45,18 +47,14 @@ class WriteStory extends Component {
   }
 
   handleSubmit(event) {
-    alert("Story submitted");
-    // event.preventDefault();
-    if(this.state.storyText){
-      API.saveStory()({
-        storyText:this.state.storyText,
-        storyImageURL: this.state.storyImageURL
-      })
-    .then(res => this.loadStories())
-    .catch(err => console.log(err));
-     }
-    }
-    
+    event.preventDefault();
+    // if (this.state.storyText) {
+    API.saveStory(this.state.textValue, this.state.imageClicked.src, this.state.imageClicked.title, false, 0)
+      .then(alert("You submitted your story!"))
+      .catch(err => console.log(err));
+    // }
+  }
+
 
 
   handleImageClick(value) {
@@ -67,39 +65,40 @@ class WriteStory extends Component {
     })
   }
 
- loadStories = () => {
-
- }
 
   render() {
     return (
-      <div key={this.props.match.params.random}>
-        {this.state.imageClicked ? (
-          <div style= {{marginLeft: 350, marginTop: 50,}}>
-            <img
-              alt={this.state.imageClicked.title}
-              className="img-fluid"
-              src={this.state.imageClicked.src}
-              style= {{height: 300, webkitBoxShadow: "0 1px 20px 10px black",}}
-            />
-            <form onSubmit={this.handleSubmit} >
-              <label>
-            
-          <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story based on your giphy!" 
-            style={{height: 300, width: 533, marginTop: 30, marginLeft: 0, marginBottom: 100, fontFamily: "Gloria Hallelujah, cursive", fontSize: 20, }}/>
-              </label>
-              <input type="submit" value="Submit" 
-                style={{position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, borderRadius: 6, boxShadow: "10px 10px 20px grey"}}/>
-            </form>
-          </div>
+      (this.props.user != null) ? (
+        <div key={this.props.match.params.random}>
+          {this.state.imageClicked ? (
+            <div style={{ marginLeft: 350, marginTop: 50, }}>
+              <img
+                alt={this.state.imageClicked.title}
+                className="img-fluid"
+                src={this.state.imageClicked.src}
+                style={{ height: 300, webkitBoxShadow: "0 1px 20px 10px black", }}
+              />
+              <form onSubmit={this.handleSubmit} >
+                <label>
 
-        ) : (
-            <div>
-              <SearchResultContainer onImageClick={this.handleImageClick} />
+                  <textarea value={this.state.textValue} onChange={this.handleChange} placeholder="Write your story based on your giphy!"
+                    style={{ height: 300, width: 533, marginTop: 30, marginLeft: 0, marginBottom: 100, fontFamily: "Gloria Hallelujah, cursive", fontSize: 20, }} />
+                </label>
+                <input type="submit" value="Submit"
+                  style={{ position: "absolute", marginLeft: 40, backgroundColor: "blue", color: "white", padding: 10, fontSize: 20, borderRadius: 6, boxShadow: "10px 10px 20px grey" }} />
+              </form>
             </div>
-          )}
 
-      </div>
+          ) : (
+              <div>
+                <SearchResultContainer onImageClick={this.handleImageClick} />
+              </div>
+            )}
+
+        </div>
+      ) : (
+          <Redirect to='/' />
+        )
     );
   }
 }
