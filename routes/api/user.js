@@ -24,6 +24,9 @@ router.route("/logIn")
     router.route("/saveStory")
   .post(usersController.saveStory);
 
+  router.route("/shareStory")
+  .post(usersController.shareStory);
+
   // router.route("/deleteStory")
   // .post(usersController.deleteStory);
 
@@ -34,8 +37,7 @@ router.route("/logIn")
   // .post(usersController.name);
 
 
-  // router.route("/shareStory")
-  // .post(usersController.shareStory);
+ 
 
   // router.route("/getGifs")
   // .get(usersController.getGifs);

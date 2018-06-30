@@ -9,7 +9,7 @@ export default {
     return axios.get(BASEURL + query + APIKEY);
   },
   getUser: function () {
-    return axios.get("/api/user/veryFirstUser");
+    return axios.get("/api/user/myStories");
   },
 
   logIn: function (username, password) {
@@ -32,12 +32,18 @@ export default {
     });
   },
 
- signUp: function (username, password) {
+  signUp: function (username, password) {
     return axios.post("/api/user/signUp", {
       username: username,
       password: password
     })
+  },
+  shareStory: function (storyId) {
+    return axios.post("/api/user/shareStory", {
+      id: storyId
+    })
   }
+
 
 
   // deleteStory: function(id){
