@@ -30,9 +30,11 @@ class App extends React.Component{
     this.handleLogIn = this.handleLogIn.bind(this);
   }
 
-handleLogIn(value){
-
-
+handleLogIn(user){
+  this.setState({
+    user: user
+  })
+  alert(JSON.stringify(user));
 }
 
 
@@ -40,7 +42,7 @@ handleLogIn(value){
     return(
       <Router >
     <div >
-      <Navbar user={this.state.user}/>
+      <Navbar user={this.state.user} onLogIn={this.handleLogIn}/>
       <Wrapper  >
       <Grid fluid= {true} style= {{marginLeft: 0, marginRight: 0, }}>
   <Row className="show-grid" >

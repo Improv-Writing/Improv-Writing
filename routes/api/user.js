@@ -24,11 +24,14 @@ router.route("/logIn")
     router.route("/saveStory")
   .post(usersController.saveStory);
 
+  // router.route("/deleteStory")
+  // .post(usersController.deleteStory);
+
   // router.route("/like")
   // .post(usersController.like);
 
   // router.route("/name")
-  // .post(usersController.like);
+  // .post(usersController.name);
 
 
   // router.route("/shareStory")

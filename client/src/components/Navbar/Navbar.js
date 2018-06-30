@@ -48,17 +48,31 @@ const Navbar = props => (
             Profile
           </Link>
         </li>
-        <li 
+       
+          { //Conditional on login
+            props.user != null ? (
+              <li 
           className={ 
             window.location.pathname === "/Login" 
-              ? "nav-item active"
-              : "nav-item"
-              
+            ? "nav-item active"
+            : "nav-item"
+            
           }
         >
-          
-          <Login style={{textShadow: "2px 2px 6px black",}}/>
-         
+          <Login onLogIn={props.onLogIn} style={{textShadow: "2px 2px 6px black",}}/>
+        </li>
+          ):(
+          <div>
+            
+          <li 
+          className={ 
+            window.location.pathname === "/Login" 
+            ? "nav-item active"
+            : "nav-item"
+            
+          }
+        >
+          <Login onLogIn={props.onLogIn} style={{textShadow: "2px 2px 6px black",}}/>
         </li>
        
         <li
@@ -72,6 +86,10 @@ const Navbar = props => (
           <Signup />
        
         </li>
+        </div>
+          )
+            
+          }
         
 
       </ul>

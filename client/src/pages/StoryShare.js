@@ -20,7 +20,7 @@ constructor(props, context){
   componentDidMount(){
     API.publicStories()
     .then(function(res) {
-        alert(JSON.stringify(res.data, null, 4));
+        // alert(JSON.stringify(res.data, null, 4));
     })
   }
 

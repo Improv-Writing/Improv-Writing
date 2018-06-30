@@ -54,10 +54,15 @@ class Login extends React.Component {
 
   handleSubmit(event){
     event.preventDefault();
+    
+    let onLogIn = this.props.onLogIn;
     API.logIn(this.state.userNameInput, this.state.passwordInput)
     .then(
       function(res) {
         alert(JSON.stringify(res.data, null, 4));
+        if(res.data['user'] != undefined){
+          onLogIn(res.data['user']);
+        }
       }
     
     )

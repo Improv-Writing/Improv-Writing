@@ -21,6 +21,7 @@ class WriteStory extends Component {
   }
   componentDidMount() {
     this.checkRandom()
+    // this.handleSubmit()
    
   }
 
@@ -44,8 +45,8 @@ class WriteStory extends Component {
   }
 
   handleSubmit(event) {
-    alert("Story submitted" + this.state.value);
-    event.preventDefault();
+    alert("Story submitted");
+    // event.preventDefault();
     if(this.state.storyText){
       API.saveStory()({
         storyText:this.state.storyText,
@@ -66,7 +67,9 @@ class WriteStory extends Component {
     })
   }
 
- 
+ loadStories = () => {
+
+ }
 
   render() {
     return (

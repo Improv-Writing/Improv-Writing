@@ -68,6 +68,7 @@ module.exports = {
   },
 
 
+
   myStories: function (req, res) {
     if (req.user) {
       db.User.find({
@@ -128,7 +129,7 @@ module.exports = {
       if (!user) {
         return res.send({
           response: 'failure',
-          message: "Username and password combination is not correct"
+          message: info
         })
       }
       req.logIn(user, function (err) {
