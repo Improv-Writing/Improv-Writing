@@ -8,13 +8,10 @@ const bcrypt = require("bcrypt");
 const UserSchema = new Schema({
     stories: 
     [{
+        storyId: {type: Number, required :true},
         storyText: { type: String, required: true },
         storyImgUrl: { type: String, required: true },
-        storyImgName: { type: String, required: true },
-        storyComments: 
-          [{
-            comment: { type: String, required: true },
-          }],
+        storyImgName: { type: String, required: true },       
         storyShare: {type: Boolean, required: true},
         storyLikes: {type: Number, required: true }
      }],

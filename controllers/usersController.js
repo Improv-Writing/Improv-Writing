@@ -41,25 +41,57 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
- saveStory: function (req, res) {
+  saveStory: function (req, res) {
     if (req.user) {
-      db.User.post({
-          username: req.user["username"],
-          storyText: req.storyText,
-          storyImgURL: req.storyImgURL
 
-        })
-        .then(dbModel => {
-          dbModel[0]["password"] = undefined;
-          return dbModel
-          res.save({
+      var newStoryId =  Math.floor(Math.random() * Math.floor(999999999));
+      var newStory = {
+        storyId: newStoryId,
+        storyText: req.body.storyText,
+        storyImgUrl: req.body.storyImgUrl,
+        storyImgName: req.body.storyImgName,       
+        storyShare: req.body.storyShare,
+        storyLikes: req.body.storyLikes
+        }
+        db.User.update(
+          {username:req.user["username"]},
+          { $push: {stories: newStory}}
+        )
+        .then(
+          res.json({
             success: true,
-           'message':'Story Submitted!'
+            'message': 'Story Submitted!'
           })
-        })
-        .then(dbModel => res.json(dbModel))
+        )
+      //   })
+      //   .then(dbModel => {
+      //       dbModel[0]['stories'].push({
+      //         another: 'element'
+      //       });
+      //       console.log(dbModel[0])
+            // dbModel[0]['stories']
+          // }
+
+        // )
+        // .then(dbModel => res.json({}))
+        // db.User.post({
+        //     username: req.user["username"],
+
+        //     storyText: req.storyText,
+        //     storyImgURL: req.storyImgURL
+
+        //   })
+        //   .then(dbModel => {
+        //     dbModel[0]["password"] = undefined;
+        //     return dbModel
+        //     res.save({
+        //       success: true,
+        //       'message': 'Story Submitted!'
+        //     })
+        //   })
+        //   .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
-        
+
     } else {
       res.status(422).json({
         error: 'Login required'
