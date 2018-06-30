@@ -22,8 +22,14 @@ export default {
     return axios.get("/api/user/publicStories");
   },
   //  save stories to database
-  saveStory: function (id) {
-    return axios.post("/api/user/saveStory" + id);
+  saveStory: function (storyText, storyImgUrl, storyImgName, storyShare, storyLikes) {
+    return axios.post("/api/user/saveStory", {
+      storyText: storyText,
+      storyImgUrl:storyImgUrl,
+      storyImgName: storyImgName,
+      storyShare: storyShare,
+      storyLikes: storyLikes
+    });
   },
 
  signUp: function (username, password) {
