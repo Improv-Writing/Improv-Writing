@@ -11,6 +11,7 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
+    "heroku-prebuild": "cd client && yarn install",
     "heroku-postbuild": "node scripts/build.js"
   },
   "author": "",
